@@ -1,0 +1,19 @@
+{
+  "Install": [],
+  "WPFFeature": [],
+  "WPFInstall": [],
+  "WPFTweaks": [
+    "WPFTweaksOO",
+    "WPFTweaksHome",
+    "WPFTweaksAH",
+    "WPFTweaksWifi",
+    "WPFTweaksDVR",
+    "WPFTweaksLoc",
+    "WPFTweaksTeredo",
+    "WPFTweaksTele",
+    "WPFTweaksStorage",
+    "WPFTweaksEndTaskOnTaskbar",
+    "WPFTweaksPowershell7",
+    "WPFTweaksServices"
+  ]
+}
