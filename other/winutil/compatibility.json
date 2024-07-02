@@ -1,65 +1,65 @@
 {
-	"Install": [
-		{
-			"winget": "Microsoft.WindowsTerminal",
-			"choco": "microsoft-windows-terminal"
-		},
-		{
-			"winget": "Microsoft.DotNet.DesktopRuntime.6",
-			"choco": "dotnet-6.0-runtime"
-		},
-		{
-			"winget": "Microsoft.VCRedist.2015+.x86",
-			"choco": "na"
-		},
-		{
-			"winget": "Microsoft.PowerToys",
-			"choco": "powertoys"
-		},
-		{
-			"winget": "Microsoft.DotNet.DesktopRuntime.8",
-			"choco": "dotnet-8.0-runtime"
-		},
-		{
-			"winget": "Microsoft.VCRedist.2015+.x64",
-			"choco": "na"
-		},
-		{
-			"winget": "7zip.7zip",
-			"choco": "7zip"
-		},
-		{
-			"winget": "Microsoft.PowerShell",
-			"choco": "powershell-core"
-		},
-		{
-			"winget": "Git.Git",
-			"choco": "git"
-		},
-		{
-			"winget": "Microsoft.DotNet.DesktopRuntime.7",
-			"choco": "dotnet-7.0-runtime"
-		}
-	],
-	"WPFFeature": [
-		"WPFFeaturewsl",
-		"WPFFeatureslegacymedia",
-		"WPFFeaturesdotnet",
-		"WPFFeaturesandbox",
-		"WPFFeatureshyperv",
-		"WPFFeatureDisableSearchSuggestions"
-	],
-	"WPFInstall": [
-		"WPFInstallterminal",
-		"WPFInstalldotnet6",
-		"WPFInstallvc2015_32",
-		"WPFInstallpowertoys",
-		"WPFInstalldotnet8",
-		"WPFInstallvc2015_64",
-		"WPFInstall7zip",
-		"WPFInstallpowershell",
-		"WPFInstallgit",
-		"WPFInstalldotnet7"
-	],
-	"WPFTweaks": []
+  "Install": [
+    {
+      "winget": "Microsoft.WindowsTerminal",
+      "choco": "microsoft-windows-terminal"
+    },
+    {
+      "winget": "Microsoft.DotNet.DesktopRuntime.6",
+      "choco": "dotnet-6.0-runtime"
+    },
+    {
+      "winget": "Microsoft.VCRedist.2015+.x86",
+      "choco": "na"
+    },
+    {
+      "winget": "Microsoft.PowerToys",
+      "choco": "powertoys"
+    },
+    {
+      "winget": "Microsoft.DotNet.DesktopRuntime.8",
+      "choco": "dotnet-8.0-runtime"
+    },
+    {
+      "winget": "Microsoft.VCRedist.2015+.x64",
+      "choco": "na"
+    },
+    {
+      "winget": "7zip.7zip",
+      "choco": "7zip"
+    },
+    {
+      "winget": "Microsoft.PowerShell",
+      "choco": "powershell-core"
+    },
+    {
+      "winget": "Git.Git",
+      "choco": "git"
+    },
+    {
+      "winget": "Microsoft.DotNet.DesktopRuntime.7",
+      "choco": "dotnet-7.0-runtime"
+    }
+  ],
+  "WPFFeature": [
+    "WPFFeaturewsl",
+    "WPFFeatureslegacymedia",
+    "WPFFeaturesdotnet",
+    "WPFFeaturesandbox",
+    "WPFFeatureshyperv",
+    "WPFFeatureDisableSearchSuggestions"
+  ],
+  "WPFInstall": [
+    "WPFInstallterminal",
+    "WPFInstalldotnet6",
+    "WPFInstallvc2015_32",
+    "WPFInstallpowertoys",
+    "WPFInstalldotnet8",
+    "WPFInstallvc2015_64",
+    "WPFInstall7zip",
+    "WPFInstallpowershell",
+    "WPFInstallgit",
+    "WPFInstalldotnet7"
+  ],
+  "WPFTweaks": []
 }
