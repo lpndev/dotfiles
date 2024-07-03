@@ -61,10 +61,6 @@
       "choco": "brave"
     },
     {
-      "winget": "VB-Audio.Voicemeeter",
-      "choco": "voicemeeter"
-    },
-    {
       "winget": "Anki.Anki",
       "choco": "anki"
     },
@@ -83,10 +79,6 @@
     {
       "winget": "PrismLauncher.PrismLauncher",
       "choco": "prismlauncher"
-    },
-    {
-      "winget": "qBittorrent.qBittorrent",
-      "choco": "qbittorrent"
     },
     {
       "winget": "Microsoft.VisualStudioCode",
@@ -162,13 +154,11 @@
     "WPFInstallsteam",
     "WPFInstallwinscp",
     "WPFInstallbrave",
-    "WPFInstallvoicemeeter",
     "WPFInstallanki",
     "WPFInstallesearch",
     "WPFInstallvlc",
     "WPFInstallflow",
     "WPFInstallprismlauncher",
-    "WPFInstallqbittorrent",
     "WPFInstallvscode",
     "WPFInstallbitwarden",
     "WPFInstalltelegram",
