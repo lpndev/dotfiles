@@ -1,188 +1,188 @@
 {
-	"Install": [
-		{
-			"winget": "OBSProject.OBSStudio",
-			"choco": "obs-studio"
-		},
-		{
-			"winget": "DevToys-app.DevToys",
-			"choco": "devtoys"
-		},
-		{
-			"winget": "Docker.DockerDesktop",
-			"choco": "docker-desktop"
-		},
-		{
-			"winget": "AutoHotkey.AutoHotkey",
-			"choco": "autohotkey"
-		},
-		{
-			"winget": "CPUID.HWMonitor",
-			"choco": "hwmonitor"
-		},
-		{
-			"winget": "Obsidian.Obsidian",
-			"choco": "obsidian"
-		},
-		{
-			"winget": "CrystalDewWorld.CrystalDiskInfo",
-			"choco": "crystaldiskinfo"
-		},
-		{
-			"winget": "na",
-			"choco": "equalizerapo"
-		},
-		{
-			"winget": "ShareX.ShareX",
-			"choco": "sharex"
-		},
-		{
-			"winget": "RustDesk.RustDesk",
-			"choco": "rustdesk.portable"
-		},
-		{
-			"winget": "RevoUninstaller.RevoUninstaller",
-			"choco": "revo-uninstaller"
-		},
-		{
-			"winget": "Spotify.Spotify",
-			"choco": "spotify"
-		},
-		{
-			"winget": "Valve.Steam",
-			"choco": "steam-client"
-		},
-		{
-			"winget": "WinSCP.WinSCP",
-			"choco": "winscp"
-		},
-		{
-			"winget": "Brave.Brave",
-			"choco": "brave"
-		},
-		{
-			"winget": "VB-Audio.Voicemeeter",
-			"choco": "voicemeeter"
-		},
-		{
-			"winget": "Anki.Anki",
-			"choco": "anki"
-		},
-		{
-			"winget": "voidtools.Everything",
-			"choco": "everything"
-		},
-		{
-			"winget": "VideoLAN.VLC",
-			"choco": "vlc"
-		},
-		{
-			"winget": "Flow-Launcher.Flow-Launcher",
-			"choco": "flow-launcher"
-		},
-		{
-			"winget": "PrismLauncher.PrismLauncher",
-			"choco": "prismlauncher"
-		},
-		{
-			"winget": "qBittorrent.qBittorrent",
-			"choco": "qbittorrent"
-		},
-		{
-			"winget": "Microsoft.VisualStudioCode",
-			"choco": "vscode"
-		},
-		{
-			"winget": "Bitwarden.Bitwarden",
-			"choco": "bitwarden"
-		},
-		{
-			"winget": "Telegram.TelegramDesktop",
-			"choco": "telegram"
-		},
-		{
-			"winget": "CloneHeroTeam.CloneHero",
-			"choco": "na"
-		},
-		{
-			"winget": "Discord.Discord",
-			"choco": "discord"
-		},
-		{
-			"winget": "Nilesoft.Shell",
-			"choco": "nilesoft-shell"
-		},
-		{
-			"winget": "HeroicGamesLauncher.HeroicGamesLauncher",
-			"choco": "na"
-		},
-		{
-			"winget": "MHNexus.HxD",
-			"choco": "HxD"
-		},
-		{
-			"winget": "Sandboxie.Plus",
-			"choco": "sandboxie"
-		},
-		{
-			"winget": "RARLab.WinRAR",
-			"choco": "winrar"
-		},
-		{
-			"winget": "PuTTY.PuTTY",
-			"choco": "putty"
-		},
-		{
-			"winget": "Klocman.BulkCrapUninstaller",
-			"choco": "bulk-crap-uninstaller"
-		},
-		{
-			"winget": "Audacity.Audacity",
-			"choco": "audacity"
-		},
-		{
-			"winget": "WiresharkFoundation.Wireshark",
-			"choco": "wireshark"
-		}
-	],
-	"WPFFeature": [],
-	"WPFInstall": [
-		"WPFInstallobs",
-		"WPFInstalldevtoys",
-		"WPFInstalldockerdesktop",
-		"WPFInstallautohotkey",
-		"WPFInstallhwmonitor",
-		"WPFInstallobsidian",
-		"WPFInstallcrystaldiskinfo",
-		"WPFInstallEqualizerAPO",
-		"WPFInstallsharex",
-		"WPFInstallrustdesk",
-		"WPFInstallrevo",
-		"WPFInstallspotify",
-		"WPFInstallsteam",
-		"WPFInstallwinscp",
-		"WPFInstallbrave",
-		"WPFInstallvoicemeeter",
-		"WPFInstallanki",
-		"WPFInstallesearch",
-		"WPFInstallvlc",
-		"WPFInstallflow",
-		"WPFInstallprismlauncher",
-		"WPFInstallqbittorrent",
-		"WPFInstallvscode",
-		"WPFInstallbitwarden",
-		"WPFInstalltelegram",
-		"WPFInstallclonehero",
-		"WPFInstalldiscord",
-		"WPFInstallnilesoftShel",
-		"WPFInstallheroiclauncher",
-		"WPFInstallxeheditor",
-		"WPFInstallsandboxie",
-		"WPFInstallwinrar",
-		"WPFInstallputty",
-		"WPFInstallbulkcrapuninstaller",
-		"WPFInstallaudacity",
-		"WPFInstallwireshark"
-	],
-	"WPFTweaks": []
+  "Install": [
+    {
+      "winget": "OBSProject.OBSStudio",
+      "choco": "obs-studio"
+    },
+    {
+      "winget": "DevToys-app.DevToys",
+      "choco": "devtoys"
+    },
+    {
+      "winget": "Docker.DockerDesktop",
+      "choco": "docker-desktop"
+    },
+    {
+      "winget": "AutoHotkey.AutoHotkey",
+      "choco": "autohotkey"
+    },
+    {
+      "winget": "CPUID.HWMonitor",
+      "choco": "hwmonitor"
+    },
+    {
+      "winget": "Obsidian.Obsidian",
+      "choco": "obsidian"
+    },
+    {
+      "winget": "CrystalDewWorld.CrystalDiskInfo",
+      "choco": "crystaldiskinfo"
+    },
+    {
+      "winget": "na",
+      "choco": "equalizerapo"
+    },
+    {
+      "winget": "ShareX.ShareX",
+      "choco": "sharex"
+    },
+    {
+      "winget": "RustDesk.RustDesk",
+      "choco": "rustdesk.portable"
+    },
+    {
+      "winget": "RevoUninstaller.RevoUninstaller",
+      "choco": "revo-uninstaller"
+    },
+    {
+      "winget": "Spotify.Spotify",
+      "choco": "spotify"
+    },
+    {
+      "winget": "Valve.Steam",
+      "choco": "steam-client"
+    },
+    {
+      "winget": "WinSCP.WinSCP",
+      "choco": "winscp"
+    },
+    {
+      "winget": "Brave.Brave",
+      "choco": "brave"
+    },
+    {
+      "winget": "VB-Audio.Voicemeeter",
+      "choco": "voicemeeter"
+    },
+    {
+      "winget": "Anki.Anki",
+      "choco": "anki"
+    },
+    {
+      "winget": "voidtools.Everything",
+      "choco": "everything"
+    },
+    {
+      "winget": "VideoLAN.VLC",
+      "choco": "vlc"
+    },
+    {
+      "winget": "Flow-Launcher.Flow-Launcher",
+      "choco": "flow-launcher"
+    },
+    {
+      "winget": "PrismLauncher.PrismLauncher",
+      "choco": "prismlauncher"
+    },
+    {
+      "winget": "qBittorrent.qBittorrent",
+      "choco": "qbittorrent"
+    },
+    {
+      "winget": "Microsoft.VisualStudioCode",
+      "choco": "vscode"
+    },
+    {
+      "winget": "Bitwarden.Bitwarden",
+      "choco": "bitwarden"
+    },
+    {
+      "winget": "Telegram.TelegramDesktop",
+      "choco": "telegram"
+    },
+    {
+      "winget": "CloneHeroTeam.CloneHero",
+      "choco": "na"
+    },
+    {
+      "winget": "Discord.Discord",
+      "choco": "discord"
+    },
+    {
+      "winget": "Nilesoft.Shell",
+      "choco": "nilesoft-shell"
+    },
+    {
+      "winget": "HeroicGamesLauncher.HeroicGamesLauncher",
+      "choco": "na"
+    },
+    {
+      "winget": "MHNexus.HxD",
+      "choco": "HxD"
+    },
+    {
+      "winget": "Sandboxie.Plus",
+      "choco": "sandboxie"
+    },
+    {
+      "winget": "RARLab.WinRAR",
+      "choco": "winrar"
+    },
+    {
+      "winget": "PuTTY.PuTTY",
+      "choco": "putty"
+    },
+    {
+      "winget": "Klocman.BulkCrapUninstaller",
+      "choco": "bulk-crap-uninstaller"
+    },
+    {
+      "winget": "Audacity.Audacity",
+      "choco": "audacity"
+    },
+    {
+      "winget": "WiresharkFoundation.Wireshark",
+      "choco": "wireshark"
+    }
+  ],
+  "WPFFeature": [],
+  "WPFInstall": [
+    "WPFInstallobs",
+    "WPFInstalldevtoys",
+    "WPFInstalldockerdesktop",
+    "WPFInstallautohotkey",
+    "WPFInstallhwmonitor",
+    "WPFInstallobsidian",
+    "WPFInstallcrystaldiskinfo",
+    "WPFInstallEqualizerAPO",
+    "WPFInstallsharex",
+    "WPFInstallrustdesk",
+    "WPFInstallrevo",
+    "WPFInstallspotify",
+    "WPFInstallsteam",
+    "WPFInstallwinscp",
+    "WPFInstallbrave",
+    "WPFInstallvoicemeeter",
+    "WPFInstallanki",
+    "WPFInstallesearch",
+    "WPFInstallvlc",
+    "WPFInstallflow",
+    "WPFInstallprismlauncher",
+    "WPFInstallqbittorrent",
+    "WPFInstallvscode",
+    "WPFInstallbitwarden",
+    "WPFInstalltelegram",
+    "WPFInstallclonehero",
+    "WPFInstalldiscord",
+    "WPFInstallnilesoftShel",
+    "WPFInstallheroiclauncher",
+    "WPFInstallxeheditor",
+    "WPFInstallsandboxie",
+    "WPFInstallwinrar",
+    "WPFInstallputty",
+    "WPFInstallbulkcrapuninstaller",
+    "WPFInstallaudacity",
+    "WPFInstallwireshark"
+  ],
+  "WPFTweaks": []
 }
