@@ -3,17 +3,23 @@
   "WPFFeature": [],
   "WPFInstall": [],
   "WPFTweaks": [
-    "WPFTweaksOO",
-    "WPFTweaksHome",
-    "WPFTweaksAH",
     "WPFTweaksWifi",
-    "WPFTweaksDVR",
-    "WPFTweaksLoc",
-    "WPFTweaksTeredo",
-    "WPFTweaksTele",
+    "WPFTweaksDisableipsix",
+    "WPFTweaksHome",
+    "WPFTweaksDisableLMS1",
     "WPFTweaksStorage",
+    "WPFTweaksConsumerFeatures",
+    "WPFTweaksDVR",
+    "WPFTweaksTele",
+    "WPFTweaksDisplay",
+    "WPFTweaksAH",
+    "WPFTweaksRightClickMenu",
     "WPFTweaksEndTaskOnTaskbar",
-    "WPFTweaksPowershell7",
-    "WPFTweaksServices"
+    "WPFTweaksRemoveCopilot",
+    "WPFTweaksLoc",
+    "WPFTweaksRemoveOnedrive",
+    "WPFTweaksServices",
+    "WPFTweaksTeredo",
+    "WPFTweaksPowershell7"
   ]
 }
