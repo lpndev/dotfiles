@@ -93,10 +93,6 @@
       "choco": "telegram"
     },
     {
-      "winget": "CloneHeroTeam.CloneHero",
-      "choco": "na"
-    },
-    {
       "winget": "Discord.Discord",
       "choco": "discord"
     },
@@ -162,7 +158,6 @@
     "WPFInstallvscode",
     "WPFInstallbitwarden",
     "WPFInstalltelegram",
-    "WPFInstallclonehero",
     "WPFInstalldiscord",
     "WPFInstallnilesoftShel",
     "WPFInstallheroiclauncher",
