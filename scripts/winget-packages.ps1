@@ -1,8 +1,3 @@
-if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
-    Write-Host "Error: You must run this script as an administrator."
-    exit 1
-}
-
 $compatibility = @(
     "winget install Microsoft.DirectX",
     "winget install Microsoft.XNARedist",

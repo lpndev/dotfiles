@@ -1,6 +1,5 @@
 $foldersToClean = @(
   "$env:USERPROFILE\AppData\Local\Temp",
-  "$env:USERPROFILE\Recent",
   "C:\Windows\Prefetch",
   "C:\Windows\Temp"
 )
