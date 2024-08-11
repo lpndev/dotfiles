@@ -1,0 +1,60 @@
+{
+  "WPFTweaks": [],
+  "Install": [
+    {
+      "winget": "7zip.7zip",
+      "choco": "7zip"
+    },
+    {
+      "winget": "Microsoft.PowerShell",
+      "choco": "powershell-core"
+    },
+    {
+      "winget": "Microsoft.VCRedist.2015+.x64",
+      "choco": "na"
+    },
+    {
+      "winget": "Microsoft.DotNet.DesktopRuntime.7",
+      "choco": "dotnet-7.0-runtime"
+    },
+    {
+      "winget": "Microsoft.WindowsTerminal",
+      "choco": "microsoft-windows-terminal"
+    },
+    {
+      "winget": "Microsoft.PowerToys",
+      "choco": "powertoys"
+    },
+    {
+      "winget": "Microsoft.DotNet.DesktopRuntime.8",
+      "choco": "dotnet-8.0-runtime"
+    },
+    {
+      "winget": "Microsoft.VCRedist.2015+.x86",
+      "choco": "na"
+    },
+    {
+      "winget": "Git.Git",
+      "choco": "git"
+    }
+  ],
+  "WPFFeature": [
+    "WPFFeatureslegacymedia",
+    "WPFFeatureDisableSearchSuggestions",
+    "WPFFeaturesSandbox",
+    "WPFFeatureshyperv",
+    "WPFFeaturewsl",
+    "WPFFeaturesdotnet"
+  ],
+  "WPFInstall": [
+    "WPFInstall7zip",
+    "WPFInstallpowershell",
+    "WPFInstallvc2015_64",
+    "WPFInstalldotnet7",
+    "WPFInstallterminal",
+    "WPFInstallpowertoys",
+    "WPFInstalldotnet8",
+    "WPFInstallvc2015_32",
+    "WPFInstallgit"
+  ]
+}
