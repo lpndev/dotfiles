@@ -1,35 +1,35 @@
 {
   "WPFTweaks": [
+    "WPFTweaksAH",
+    "WPFTweaksConsumerFeatures",
+    "WPFTweaksDisableipsix",
     "WPFTweaksDisableLMS1",
     "WPFTweaksDisplay",
     "WPFTweaksDVR",
-    "WPFTweaksTeredo",
-    "WPFTweaksTele",
-    "WPFTweaksStorage",
-    "WPFTweaksServices",
-    "WPFTweaksDisableipsix",
-    "WPFTweaksRemoveHomeGallery",
-    "WPFTweaksWifi",
-    "WPFTweaksEndTaskOnTaskbar",
     "WPFTweaksEdgeDebloat",
-    "WPFTweaksRightClickMenu",
-    "WPFTweaksAH",
-    "WPFTweaksConsumerFeatures",
-    "WPFTweaksRemoveCopilot",
-    "WPFTweaksRemoveOnedrive",
+    "WPFTweaksEndTaskOnTaskbar",
     "WPFTweaksHome",
     "WPFTweaksLoc",
+    "WPFTweaksPowershell7",
     "WPFTweaksPowershell7Tele",
-    "WPFTweaksPowershell7"
+    "WPFTweaksRemoveCopilot",
+    "WPFTweaksRemoveHomeGallery",
+    "WPFTweaksRemoveOnedrive",
+    "WPFTweaksRightClickMenu",
+    "WPFTweaksServices",
+    "WPFTweaksStorage",
+    "WPFTweaksTele",
+    "WPFTweaksTeredo",
+    "WPFTweaksWifi"
   ],
   "WPFInstall": [],
   "Install": [],
   "WPFFeature": [
     "WPFFeatureDisableSearchSuggestions",
-    "WPFFeatureshyperv",
-    "WPFFeaturewsl",
-    "WPFFeatureslegacymedia",
     "WPFFeaturesdotnet",
-    "WPFFeaturesSandbox"
+    "WPFFeatureshyperv",
+    "WPFFeatureslegacymedia",
+    "WPFFeaturesSandbox",
+    "WPFFeaturewsl"
   ]
 }
