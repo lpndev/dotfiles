@@ -8,11 +8,7 @@ This repository contains my personal dotfiles and environment settings for web d
 
 The dotfiles in this repository include:
 
-- `vscode/settings.json`: My Visual Studio Code settings, including theme, font, and plugin configurations.
-- `vscode/extensions.txt`: A list of my favorite Visual Studio Code extensions.
-- `scripts/winget-packages.ps1`: A PowerShell script that installs my favorite Windows packages using Winget.
-- `scripts/clean-temp-files.ps1`: A PowerShell script that cleans up temporary files on my system.
-- `scripts/create-directories.ps1`: A PowerShell script that creates my favorite directories and adds them to Quick Access.
-- `winget-packages.ps1`: Installs my favorite Windows packages using Winget.
-- `clean-temp-files.ps1`: Cleans up temporary files on my system.
-- `create-directories.ps1`: Creates my favorite directories and adds them to Quick Access.
+- `home/.config/`: WSL Linux shell configuration files and development environment
+- `other/`: My personal Windows settings, also [O&O ShutUp10++](https://www.oo-software.com/en/shutup10) and [WinUtil](https://github.com/ChrisTitusTech/winutil)
+- `scripts/`: Powershell scripts for certain tasks and functionalities.
+- `vscode/`: Visual Studio Code settings, including theme, font, and plugin configurations.
