@@ -116,7 +116,11 @@ function Install-WingetPackages {
   param (
     [hashtable]$Packages
   )
-  foreach ($category in $Packages.Keys) {
+    
+  $categories = @("Compatibility", "Tools", "Applications")
+    
+  foreach ($category in $categories) {
+    Write-Host "Installing $category packages..."
     foreach ($package in $Packages[$category]) {
       $command = "winget install $package"
       try {
