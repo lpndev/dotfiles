@@ -68,16 +68,6 @@ $wingetPackages = @{
   )
 }
 
-function Test-WindowsActivation {
-  $activationStatus = (Get-WmiObject -Query 'SELECT ActivationRequired FROM SoftwareLicensingProduct WHERE PartialProductKey IS NOT NULL').ActivationRequired
-  if ($activationStatus -eq 1) {
-    Start-Process powershell -ArgumentList "-Command irm https://get.activated.win | iex" -Verb RunAs
-  }
-  else {
-    Write-Host "Windows is already activated."
-  }
-}
-
 function Invoke-OptimizationScript {
   Start-Process powershell -ArgumentList "-Command irm https://christitus.com/win | iex" -Verb RunAs
 }
@@ -141,7 +131,6 @@ function Install-WingetPackages {
   Write-Host "Package installation complete."
 }
 
-Test-WindowsActivation
 Invoke-OptimizationScript
 Save-Files -Links $downloadLinks -Destination $downloadPath
 Enable-LongPaths
