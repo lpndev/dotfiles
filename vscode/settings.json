@@ -1,7 +1,4 @@
 {
-  "[astro]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "breadcrumbs.enabled": false,
   "cSpell.enabled": true,
   "diffEditor.hideUnchangedRegions.enabled": true,
@@ -15,7 +12,7 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontFamily": "JetBrainsMono Nerd Font",
   "editor.fontLigatures": true,
-  "editor.fontSize": 12,
+  "editor.fontSize": 14,
   "editor.formatOnSave": true,
   "editor.hideCursorInOverviewRuler": true,
   "editor.lineHeight": 1.8,
@@ -25,8 +22,12 @@
   "editor.renderLineHighlight": "none",
   "editor.semanticHighlighting.enabled": false,
   "editor.smoothScrolling": true,
+  "editor.stickyScroll.enabled": false,
   "editor.suggestSelection": "first",
   "editor.tabSize": 2,
+  "editor.tokenColorCustomizations": {
+    "textMateRules": []
+  },
   "editor.unicodeHighlight.nonBasicASCII": false,
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
@@ -36,9 +37,18 @@
   },
   "eslint.format.enable": true,
   "eslint.validate": ["graphql", "javascript", "javascriptreact"],
-  "explorer.compactFolders": false,
+  "explorer.compactFolders": true,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
+  "explorer.confirmPasteNative": false,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "README.md": "README*, .*ignore, .editorconfig",
+    "package.json": ".eslint*, eslint*, .prettier*, prettier*, components.json, pnpm*, next.config*, next-*, tsconfig*",
+    "tailwind.config.*": "tailwind.config*, postcss.config*",
+    ".env.local": ".env*",
+    ".env": ".env*"
+  },
   "explorer.sortOrder": "foldersNestsFiles",
   "extensions.ignoreRecommendations": true,
   "files.associations": {
@@ -63,6 +73,7 @@
   "git.openRepositoryInParentFolders": "always",
   "javascript.suggest.autoImports": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
+  "powershell.powerShellDefaultVersion": "PowerShell",
   "prettier.bracketSameLine": false,
   "prettier.jsxSingleQuote": true,
   "prettier.semi": false,
@@ -83,18 +94,24 @@
   ],
   "terminal.integrated.enablePersistentSessions": false,
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+  "terminal.integrated.fontSize": 12,
+  "terminal.integrated.fontWeight": "normal",
+  "terminal.integrated.gpuAcceleration": "off",
   "terminal.integrated.hideOnStartup": "always",
   "terminal.integrated.persistentSessionReviveProcess": "never",
   "terminal.integrated.showExitAlert": false,
   "terminal.integrated.smoothScrolling": true,
+  "typescript.preferences.preferTypeOnlyAutoImports": true,
+  "typescript.suggest.autoImports": true,
+  "typescript.tsserver.log": "off",
   "update.mode": "start",
   "update.showReleaseNotes": false,
   "window.commandCenter": false,
   "window.menuBarVisibility": "compact",
   "window.restoreWindows": "none",
   "window.zoomLevel": 1,
-  "terminal.integrated.gpuAcceleration": "off",
   "workbench.activityBar.location": "hidden",
+  "workbench.colorTheme": "Min Dark",
   "workbench.editor.empty.hint": "hidden",
   "workbench.editor.focusRecentEditorAfterClose": false,
   "workbench.editor.historyBasedLanguageDetection": false,
@@ -104,9 +121,8 @@
   "workbench.layoutControl.enabled": false,
   "workbench.list.smoothScrolling": true,
   "workbench.localHistory.enabled": false,
+  "workbench.productIconTheme": "fluent-icons",
   "workbench.startupEditor": "newUntitledFile",
-  "workbench.colorTheme": "Min Dark",
   "workbench.statusBar.visible": false,
-  "terminal.integrated.fontSize": 12,
-  "terminal.integrated.fontWeight": "normal"
+  "workbench.tree.enableStickyScroll": false
 }
