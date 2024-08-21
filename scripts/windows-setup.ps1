@@ -56,6 +56,7 @@ $wingetPackages = @{
     "Obsidian.Obsidian",
     "PrismLauncher.PrismLauncher",
     "ShareX.ShareX",
+    "SlackTechnologies.Slack",
     "Spotify.Spotify",
     "Valve.Steam"
   )
