@@ -34,18 +34,13 @@ $wingetPackages = @{
   )
   Tools         = @(
     "7zip.7zip",
-    "CPUID.HWMonitor",
-    "DevToys-app.DevToys",
-    "Git.Git",
     "Klocman.BulkCrapUninstaller",
     "Microsoft.PowerShell",
     "Microsoft.PowerToys",
     "Microsoft.VisualStudioCode",
     "Microsoft.WindowsTerminal",
     "MHNexus.HxD",
-    "Nilesoft.Shell",
     "PuTTY.PuTTY",
-    "RARLab.WinRAR",
     "voidtools.Everything",
     "WinSCP.WinSCP"
   )
@@ -59,12 +54,10 @@ $wingetPackages = @{
     "Flow-Launcher.Flow-Launcher",
     "HeroicGamesLauncher.HeroicGamesLauncher",
     "Obsidian.Obsidian",
-    "pizzaboxer.Bloxstrap",
     "PrismLauncher.PrismLauncher",
     "ShareX.ShareX",
     "Spotify.Spotify",
-    "Valve.Steam",
-    "VideoLAN.VLC"
+    "Valve.Steam"
   )
 }
 
