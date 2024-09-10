@@ -12,5 +12,3 @@ The dotfiles in this repository include:
 - `other/`: My personal Windows settings, also [O&O ShutUp10++](https://www.oo-software.com/en/shutup10) and [WinUtil](https://github.com/ChrisTitusTech/winutil)
 - `scripts/`: Powershell scripts for certain tasks and functionalities.
 - `vscode/`: Visual Studio Code settings, including theme, font, and plugin configurations.
-
-#test
