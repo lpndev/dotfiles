@@ -9,6 +9,6 @@ This repository contains my personal dotfiles and environment settings for web d
 The dotfiles in this repository include:
 
 - `home/.config/`: WSL Linux shell configuration files and development environment
-- `other/`: My personal Windows settings, also [O&O ShutUp10++](https://www.oo-software.com/en/shutup10) and [WinUtil](https://github.com/ChrisTitusTech/winutil)
+- `other/`: My personal Windows settings and also [O&O ShutUp10++](https://www.oo-software.com/en/shutup10) and [WinUtil](https://github.com/ChrisTitusTech/winutil)
 - `scripts/`: Powershell scripts for certain tasks and functionalities.
 - `vscode/`: Visual Studio Code settings, including theme, font, and plugin configurations.
