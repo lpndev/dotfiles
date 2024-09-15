@@ -41,14 +41,7 @@
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmPasteNative": false,
-  "explorer.fileNesting.enabled": true,
-  "explorer.fileNesting.patterns": {
-    "README.md": "README*, .*ignore, .editorconfig",
-    "package.json": ".eslint*, eslint*, .prettier*, prettier*, components.json, pnpm*, next.config*, next-*, tsconfig*",
-    "tailwind.config.*": "tailwind.config*, postcss.config*",
-    ".env.local": ".env*",
-    ".env": ".env*"
-  },
+
   "explorer.sortOrder": "foldersNestsFiles",
   "extensions.ignoreRecommendations": true,
   "files.associations": {
@@ -94,8 +87,7 @@
   ],
   "terminal.integrated.enablePersistentSessions": false,
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
-  "terminal.integrated.fontSize": 12,
-  "terminal.integrated.fontWeight": "normal",
+  "terminal.integrated.fontSize": 13,
   "terminal.integrated.gpuAcceleration": "off",
   "terminal.integrated.hideOnStartup": "always",
   "terminal.integrated.persistentSessionReviveProcess": "never",
@@ -121,8 +113,12 @@
   "workbench.layoutControl.enabled": false,
   "workbench.list.smoothScrolling": true,
   "workbench.localHistory.enabled": false,
-  "workbench.productIconTheme": "fluent-icons",
   "workbench.startupEditor": "newUntitledFile",
+  "workbench.tree.enableStickyScroll": false,
+  "terminal.integrated.env.linux": {},
+  "console-ninja.featureSet": "Community",
+  "window.customTitleBarVisibility": "never",
+  "typescript.updateImportsOnFileMove.enabled": "never",
   "workbench.statusBar.visible": false,
-  "workbench.tree.enableStickyScroll": false
+  "workbench.productIconTheme": "fluent-icons"
 }
