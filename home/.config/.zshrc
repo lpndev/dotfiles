@@ -3,16 +3,16 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME=""
 
 # ZSH PLUGINS
-plugins=(bun eza fzf git nvm pip pipenv python starship zoxide zsh-autosuggestions zsh-interactive-cd zsh-navigation-tools zsh-syntax-highlighting)
+plugins=(bun fzf git nvm starship zoxide zsh-autosuggestions zsh-syntax-highlighting zsh-interactive-cd zsh-navigation-tools)
 source $ZSH/oh-my-zsh.sh
 
 # ALIASES
-alias sudo="sudo "
-alias ls="eza --icons"
-alias ll="ls -ahl"
-alias fetch="fastfetch"
 alias cd="z"
+alias fetch="fastfetch"
+alias ll="ls -ahl"
+alias ls="exa --icons"
 alias rm="rm -rfv"
+alias sudo="sudo "
 
 # PNPM
 export PNPM_HOME="$HOME/.local/share/pnpm"

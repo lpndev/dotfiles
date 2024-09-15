@@ -1,6 +1,6 @@
 format ="$os$username$hostname$directory$all"
 
-add_newline = true
+add_newline = false
 scan_timeout = 10
 palette = "tw"
 
