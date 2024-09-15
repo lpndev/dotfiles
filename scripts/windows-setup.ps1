@@ -3,20 +3,21 @@ $downloadPath = "$env:USERPROFILE\Downloads"
 $mainFolders = @(
   "$env:USERPROFILE\Games",
   "$env:USERPROFILE\Portable",
-  "$env:USERPROFILE\Virtual Machines"
+  "$env:USERPROFILE\Virtual-Machines"
 )
 
 $subFolders = @(
-  "$env:USERPROFILE\Virtual Machines\Hyper-V",
-  "$env:USERPROFILE\Virtual Machines\Hyper-V\Disks",
-  "$env:USERPROFILE\Virtual Machines\Hyper-V\Config",
-  "$env:USERPROFILE\Virtual Machines\Virtual Box",
-  "$env:USERPROFILE\Virtual Machines\WSL"
+  "$env:USERPROFILE\Virtual-Machines\Hyper-V",
+  "$env:USERPROFILE\Virtual-Machines\Hyper-V\Config",
+  "$env:USERPROFILE\Virtual-Machines\Hyper-V\Disks",
+  "$env:USERPROFILE\Virtual-Machines\Shared",
+  "$env:USERPROFILE\Virtual-Machines\Virtual-Box",
+  "$env:USERPROFILE\Virtual-Machines\WSL"
 )
 
 $downloadLinks = @(
-  "https://raw.githubusercontent.com/lpndev/dotfiles/main/other/winutil/tweaks.json",
-  "https://raw.githubusercontent.com/lpndev/dotfiles/main/other/leodnz-ooshutup10.cfg"
+  "https://raw.githubusercontent.com/lpndev/dotfiles/main/other/leodnz-ooshutup10.cfg",
+  "https://raw.githubusercontent.com/lpndev/dotfiles/main/other/winutil/tweaks.json"
 )
 
 $wingetPackages = @{
@@ -24,13 +25,15 @@ $wingetPackages = @{
     "EclipseAdoptium.Temurin.17.JRE",
     "EclipseAdoptium.Temurin.21.JRE",
     "EclipseAdoptium.Temurin.8.JRE",
+    "Logitech.GHUB"
     "Microsoft.DirectX",
     "Microsoft.DotNet.DesktopRuntime.7",
     "Microsoft.DotNet.DesktopRuntime.8",
     "Microsoft.VCRedist.2015+.x64",
     "Microsoft.VCRedist.2015+.x86",
     "Microsoft.XNARedist",
-    "OpenAL.OpenAL"
+    "OpenAL.OpenAL",
+    "seerge.g-helper"
   )
   Tools         = @(
     "7zip.7zip",
@@ -39,24 +42,25 @@ $wingetPackages = @{
     "Microsoft.PowerToys",
     "Microsoft.VisualStudioCode",
     "Microsoft.WindowsTerminal",
-    "MHNexus.HxD",
     "PuTTY.PuTTY",
+    "TechPowerUp.NVCleanstall",
     "voidtools.Everything",
+    "Wagnardsoft.DisplayDriverUninstaller",
     "WinSCP.WinSCP"
   )
   Applications  = @(
+    "Anki.Anki",
     "Audacity.Audacity",
     "Bitwarden.Bitwarden",
     "Brave.Brave",
     "Discord.Discord",
     "Docker.DockerDesktop",
     "dotPDN.PaintDotNet",
-    "Flow-Launcher.Flow-Launcher",
     "HeroicGamesLauncher.HeroicGamesLauncher",
     "Obsidian.Obsidian",
-    "PrismLauncher.PrismLauncher",
+    "OBSProject.OBSStudio",
+    "pizzaboxer.Bloxstrap",
     "ShareX.ShareX",
-    "SlackTechnologies.Slack",
     "Spotify.Spotify",
     "Valve.Steam"
   )
@@ -86,6 +90,7 @@ function Enable-LongPaths {
 
 function New-Directories {
   param (
+    [Parameter(Mandatory=$true)]
     [array]$Folders
   )
   foreach ($folder in $Folders) {
