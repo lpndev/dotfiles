@@ -60,6 +60,7 @@ $wingetPackages = @{
     "Obsidian.Obsidian",
     "OBSProject.OBSStudio",
     "pizzaboxer.Bloxstrap",
+    "Proton.ProtonVPN",
     "ShareX.ShareX",
     "Spotify.Spotify",
     "Valve.Steam"
