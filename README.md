@@ -2,7 +2,7 @@
 
 ### My Environment Settings for Web Development
 
-This repository contains my personal dotfiles and environment settings for web development. It's a collection of configurations and scripts that help me stay productive and efficient while working on web development projects.
+This repository contains my **PERSONAL** dotfiles and environment settings for web development. It's a collection of configurations and scripts that help me stay productive and efficient while working on web development projects.
 
 #### Dotfiles
 
