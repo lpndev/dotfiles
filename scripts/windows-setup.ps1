@@ -38,6 +38,7 @@ $wingetPackages = @{
   Tools         = @(
     "7zip.7zip",
     "Klocman.BulkCrapUninstaller",
+    "LocalSend.LocalSend",
     "Microsoft.PowerShell",
     "Microsoft.PowerToys",
     "Microsoft.VisualStudioCode",
@@ -46,7 +47,8 @@ $wingetPackages = @{
     "TechPowerUp.NVCleanstall",
     "voidtools.Everything",
     "Wagnardsoft.DisplayDriverUninstaller",
-    "WinSCP.WinSCP"
+    "WinSCP.WinSCP",
+    "yt-dlp.yt-dlp"
   )
   Applications  = @(
     "Anki.Anki",
@@ -61,7 +63,6 @@ $wingetPackages = @{
     "OBSProject.OBSStudio",
     "pizzaboxer.Bloxstrap",
     "Proton.ProtonVPN",
-    "ShareX.ShareX",
     "Spotify.Spotify",
     "Valve.Steam"
   )
