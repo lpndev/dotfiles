@@ -1,23 +1,21 @@
 $downloadPath = "$env:USERPROFILE\Downloads"
+$downloadLinks = @(
+  "https://raw.githubusercontent.com/lpndev/dotfiles/main/other/leodnz-ooshutup10.cfg",
+  "https://raw.githubusercontent.com/lpndev/dotfiles/main/other/winutil/tweaks.json"
+)
 
 $mainFolders = @(
   "$env:USERPROFILE\Games",
   "$env:USERPROFILE\Portable",
   "$env:USERPROFILE\Virtual-Machines"
 )
-
 $subFolders = @(
-  "$env:USERPROFILE\Virtual-Machines\Hyper-V",
-  "$env:USERPROFILE\Virtual-Machines\Hyper-V\Config",
-  "$env:USERPROFILE\Virtual-Machines\Hyper-V\Disks",
-  "$env:USERPROFILE\Virtual-Machines\Shared",
-  "$env:USERPROFILE\Virtual-Machines\Virtual-Box",
-  "$env:USERPROFILE\Virtual-Machines\WSL"
-)
-
-$downloadLinks = @(
-  "https://raw.githubusercontent.com/lpndev/dotfiles/main/other/leodnz-ooshutup10.cfg",
-  "https://raw.githubusercontent.com/lpndev/dotfiles/main/other/winutil/tweaks.json"
+    "$env:USERPROFILE\Virtual-Machines\Hyper-V",
+    "$env:USERPROFILE\Virtual-Machines\Hyper-V\Config",
+    "$env:USERPROFILE\Virtual-Machines\Hyper-V\Disks",
+    "$env:USERPROFILE\Virtual-Machines\Shared",
+    "$env:USERPROFILE\Virtual-Machines\Virtual-Box",
+    "$env:USERPROFILE\Virtual-Machines\WSL"
 )
 
 $wingetPackages = @{
@@ -70,10 +68,6 @@ $wingetPackages = @{
   )
 }
 
-function Invoke-OptimizationScript {
-  Start-Process powershell -ArgumentList "-Command irm https://christitus.com/win | iex" -Verb RunAs
-}
-
 function Save-Files {
   param (
     [array]$Links,
@@ -85,11 +79,6 @@ function Save-Files {
     Invoke-WebRequest -Uri $link -OutFile $filePath
     Write-Host "Downloaded $fileName to $Destination"
   }
-}
-
-function Enable-LongPaths {
-  Set-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem' -Name 'LongPathsEnabled' -Value 1
-  Write-Host "LongPathsEnabled set to 1."
 }
 
 function New-Directories {
@@ -138,9 +127,7 @@ function Install-WingetPackages {
   Write-Host "Package installation complete."
 }
 
-Invoke-OptimizationScript
 Save-Files -Links $downloadLinks -Destination $downloadPath
-Enable-LongPaths
 New-Directories -Folders ($mainFolders + $subFolders)
 Add-ToQuickAccess -Folders $mainFolders
 Install-WingetPackages -Packages $wingetPackages
