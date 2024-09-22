@@ -52,7 +52,7 @@ $wingetPackages = @{
     "Anki.Anki",
     "Audacity.Audacity",
     "Bitwarden.Bitwarden",
-    "Brave.Brave",
+    "LibreWolf.LibreWolf",
     "Discord.Discord",
     "Docker.DockerDesktop",
     "dotPDN.PaintDotNet",
