@@ -1,6 +1,7 @@
 {
   "breadcrumbs.enabled": false,
   "cSpell.enabled": true,
+  "console-ninja.featureSet": "Community",
   "diffEditor.hideUnchangedRegions.enabled": true,
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.accessibilitySupport": "off",
@@ -41,7 +42,6 @@
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmPasteNative": false,
-
   "explorer.sortOrder": "foldersNestsFiles",
   "extensions.ignoreRecommendations": true,
   "files.associations": {
@@ -85,7 +85,9 @@
   "tailwindCSS.experimental.classRegex": [
     ["tv\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
   ],
+  "telemetry.telemetryLevel": "off",
   "terminal.integrated.enablePersistentSessions": false,
+  "terminal.integrated.env.linux": {},
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
   "terminal.integrated.fontSize": 13,
   "terminal.integrated.gpuAcceleration": "off",
@@ -96,9 +98,11 @@
   "typescript.preferences.preferTypeOnlyAutoImports": true,
   "typescript.suggest.autoImports": true,
   "typescript.tsserver.log": "off",
+  "typescript.updateImportsOnFileMove.enabled": "never",
   "update.mode": "start",
   "update.showReleaseNotes": false,
   "window.commandCenter": false,
+  "window.customTitleBarVisibility": "never",
   "window.menuBarVisibility": "compact",
   "window.restoreWindows": "none",
   "window.zoomLevel": 1,
@@ -113,12 +117,7 @@
   "workbench.layoutControl.enabled": false,
   "workbench.list.smoothScrolling": true,
   "workbench.localHistory.enabled": false,
+  "workbench.productIconTheme": "fluent-icons",
   "workbench.startupEditor": "newUntitledFile",
-  "workbench.tree.enableStickyScroll": false,
-  "terminal.integrated.env.linux": {},
-  "console-ninja.featureSet": "Community",
-  "window.customTitleBarVisibility": "never",
-  "typescript.updateImportsOnFileMove.enabled": "never",
-  "workbench.statusBar.visible": false,
-  "workbench.productIconTheme": "fluent-icons"
+  "workbench.tree.enableStickyScroll": false
 }
