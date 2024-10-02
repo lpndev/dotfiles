@@ -42,6 +42,7 @@ $wingetPackages = @{
     "Microsoft.VisualStudioCode",
     "Microsoft.WindowsTerminal",
     "PuTTY.PuTTY",
+    "Safing.Portmaster",
     "TechPowerUp.NVCleanstall",
     "voidtools.Everything",
     "Wagnardsoft.DisplayDriverUninstaller",
