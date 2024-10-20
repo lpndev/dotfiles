@@ -72,7 +72,7 @@ $wingetPackages = @{
     "OBSProject.OBSStudio",
     "Proton.ProtonVPN",
     "Roblox.Roblox",
-    "seerge.g-helper"
+    "seerge.g-helper",
     "Spotify.Spotify",
     "Valve.Steam"
   )
@@ -87,8 +87,13 @@ function Save-Files {
   foreach ($link in $Links) {
     $fileName = Split-Path $link -Leaf
     $filePath = Join-Path $Destination $fileName
-    Invoke-WebRequest -Uri $link -OutFile $filePath
-    Write-Host "Downloaded $fileName to $Destination"
+    try {
+      Invoke-WebRequest -Uri $link -OutFile $filePath -ErrorAction Stop
+      Write-Host "Downloaded $fileName to $Destination" -ForegroundColor Green
+    }
+    catch {
+      Write-Host "Failed to download $fileName $_" -ForegroundColor Red
+    }
   }
 }
 
@@ -98,13 +103,18 @@ function New-Directories {
     [hashtable]$FolderStructure
   )
   foreach ($parentFolder in $FolderStructure.Keys) {
-    New-Item -ItemType Directory -Path $parentFolder -Force | Out-Null
-    foreach ($subFolder in $FolderStructure[$parentFolder]) {
-      $fullPath = Join-Path $parentFolder $subFolder
-      New-Item -ItemType Directory -Path $fullPath -Force | Out-Null
+    try {
+      New-Item -ItemType Directory -Path $parentFolder -Force -ErrorAction Stop | Out-Null
+      foreach ($subFolder in $FolderStructure[$parentFolder]) {
+        $fullPath = Join-Path $parentFolder $subFolder
+        New-Item -ItemType Directory -Path $fullPath -Force -ErrorAction Stop | Out-Null
+      }
+    }
+    catch {
+      Write-Host "Error creating directory $($_.TargetObject): $_" -ForegroundColor Red
     }
   }
-  Write-Host "Directories created."
+  Write-Host "Directories created." -ForegroundColor Green
 }
 
 # Function to add folders to Quick Access
@@ -114,10 +124,15 @@ function Add-ToQuickAccess {
   )
   $shell = New-Object -ComObject Shell.Application
   foreach ($folder in $Folders) {
-    $folderItem = $shell.Namespace($folder).Self
-    $folderItem.InvokeVerb('pintohome')
+    try {
+      $folderItem = $shell.Namespace($folder).Self
+      $folderItem.InvokeVerb('pintohome')
+      Write-Host "Added $folder to Quick Access" -ForegroundColor Green
+    }
+    catch {
+      Write-Host "Failed to add $folder to Quick Access: $_" -ForegroundColor Red
+    }
   }
-  Write-Host "Folders added to Quick Access."
 }
 
 # Function to install Winget packages
@@ -129,19 +144,25 @@ function Install-WingetPackages {
   $orderedCategories = @("Compatibility", "Tools", "Applications")
   
   foreach ($category in $orderedCategories) {
-    Write-Host "Installing $category packages..."
+    Write-Host "Installing $category packages..." -ForegroundColor Cyan
     foreach ($package in $Packages[$category]) {
-      $command = "winget install $package --accept-package-agreements --accept-source-agreements"
+      $command = "winget install $package --silent --disable-interactivity --accept-package-agreements --accept-source-agreements"
       try {
-        Write-Host "Installing: $package"
-        Invoke-Expression $command
+        Write-Host "Installing: $package" -ForegroundColor Yellow
+        $output = Invoke-Expression $command
+        if ($output -match "Successfully installed") {
+          Write-Host "Successfully installed $package" -ForegroundColor Green
+        }
+        else {
+          Write-Host "Installation of $package may have failed. Please check." -ForegroundColor Yellow
+        }
       }
       catch {
-        Write-Host "Error installing: $package`nError: $_"
+        Write-Host "Error installing: $package`nError: $_" -ForegroundColor Red
       }
     }
   }
-  Write-Host "Package installation complete."
+  Write-Host "Package installation complete." -ForegroundColor Green
 }
 
 # Main execution
