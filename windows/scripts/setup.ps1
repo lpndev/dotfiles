@@ -87,12 +87,17 @@ function Save-Files {
   foreach ($link in $Links) {
     $fileName = Split-Path $link -Leaf
     $filePath = Join-Path $Destination $fileName
-    try {
-      Invoke-WebRequest -Uri $link -OutFile $filePath -ErrorAction Stop
-      Write-Host "Downloaded $fileName to $Destination" -ForegroundColor Green
+    if (Test-Path $filePath) {
+      Write-Host "$fileName already exists in $Destination" -ForegroundColor Yellow
     }
-    catch {
-      Write-Host "Failed to download $fileName $_" -ForegroundColor Red
+    else {
+      try {
+        Invoke-WebRequest -Uri $link -OutFile $filePath -ErrorAction Stop
+        Write-Host "Downloaded $fileName to $Destination" -ForegroundColor Green
+      }
+      catch {
+        Write-Host "Failed to download $fileName $_" -ForegroundColor Red
+      }
     }
   }
 }
@@ -103,18 +108,34 @@ function New-Directories {
     [hashtable]$FolderStructure
   )
   foreach ($parentFolder in $FolderStructure.Keys) {
-    try {
-      New-Item -ItemType Directory -Path $parentFolder -Force -ErrorAction Stop | Out-Null
-      foreach ($subFolder in $FolderStructure[$parentFolder]) {
-        $fullPath = Join-Path $parentFolder $subFolder
-        New-Item -ItemType Directory -Path $fullPath -Force -ErrorAction Stop | Out-Null
+    if (!(Test-Path $parentFolder)) {
+      try {
+        New-Item -ItemType Directory -Path $parentFolder -Force -ErrorAction Stop | Out-Null
+        Write-Host "Created directory $parentFolder" -ForegroundColor Green
+      }
+      catch {
+        Write-Host "Error creating directory $parentFolder $_" -ForegroundColor Red
       }
     }
-    catch {
-      Write-Host "Error creating directory $($_.TargetObject): $_" -ForegroundColor Red
+    else {
+      Write-Host "Directory $parentFolder already exists" -ForegroundColor Yellow
+    }
+    foreach ($subFolder in $FolderStructure[$parentFolder]) {
+      $fullPath = Join-Path $parentFolder $subFolder
+      if (!(Test-Path $fullPath)) {
+        try {
+          New-Item -ItemType Directory -Path $fullPath -Force -ErrorAction Stop | Out-Null
+          Write-Host "Created directory $fullPath" -ForegroundColor Green
+        }
+        catch {
+          Write-Host "Error creating directory $fullPath $_" -ForegroundColor Red
+        }
+      }
+      else {
+        Write-Host "Directory $fullPath already exists" -ForegroundColor Yellow
+      }
     }
   }
-  Write-Host "Directories created." -ForegroundColor Green
 }
 
 # Function to add folders to Quick Access
@@ -126,8 +147,13 @@ function Add-ToQuickAccess {
   foreach ($folder in $Folders) {
     try {
       $folderItem = $shell.Namespace($folder).Self
-      $folderItem.InvokeVerb('pintohome')
-      Write-Host "Added $folder to Quick Access" -ForegroundColor Green
+      if (!($folderItem.IsLink)) {
+        $folderItem.InvokeVerb('pintohome')
+        Write-Host "Added $folder to Quick Access" -ForegroundColor Green
+      }
+      else {
+        Write-Host "$folder is already pinned to Quick Access" -ForegroundColor Yellow
+      }
     }
     catch {
       Write-Host "Failed to add $folder to Quick Access: $_" -ForegroundColor Red
@@ -142,16 +168,25 @@ function Install-WingetPackages {
   )
   
   $orderedCategories = @("Compatibility", "Tools", "Applications")
+  $totalPackages = ($Packages.Values | Measure-Object -Sum).Sum
+  $installedPackages = 0
   
   foreach ($category in $orderedCategories) {
     Write-Host "Installing $category packages..." -ForegroundColor Cyan
     foreach ($package in $Packages[$category]) {
+      $installedPackages++
+      $percentComplete = ($installedPackages / $totalPackages) * 100
+      
+      Write-Progress -Activity "Installing Packages" -Status "Installing: $package" -PercentComplete $percentComplete
+      
       $command = "winget install $package --silent --disable-interactivity --accept-package-agreements --accept-source-agreements"
       try {
-        Write-Host "Installing: $package" -ForegroundColor Yellow
         $output = Invoke-Expression $command
         if ($output -match "Successfully installed") {
           Write-Host "Successfully installed $package" -ForegroundColor Green
+        }
+        elseif ($output -match "already installed") {
+          Write-Host "$package is already installed" -ForegroundColor Yellow
         }
         else {
           Write-Host "Installation of $package may have failed. Please check." -ForegroundColor Yellow
@@ -162,6 +197,7 @@ function Install-WingetPackages {
       }
     }
   }
+  Write-Progress -Activity "Installing Packages" -Completed
   Write-Host "Package installation complete." -ForegroundColor Green
 }
 
