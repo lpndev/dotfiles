@@ -1,29 +1,30 @@
+# Define paths and URLs
 $downloadPath = "$env:USERPROFILE\Downloads"
 $downloadLinks = @(
   "https://raw.githubusercontent.com/lpndev/dotfiles/main/other/leodnz-ooshutup10.cfg",
   "https://raw.githubusercontent.com/lpndev/dotfiles/main/other/winutil/tweaks.json"
 )
 
-$mainFolders = @(
-  "$env:USERPROFILE\Games",
-  "$env:USERPROFILE\Portable",
-  "$env:USERPROFILE\Virtual-Machines"
-)
-$subFolders = @(
-    "$env:USERPROFILE\Virtual-Machines\Hyper-V",
-    "$env:USERPROFILE\Virtual-Machines\Hyper-V\Config",
-    "$env:USERPROFILE\Virtual-Machines\Hyper-V\Disks",
-    "$env:USERPROFILE\Virtual-Machines\Shared",
-    "$env:USERPROFILE\Virtual-Machines\Virtual-Box",
-    "$env:USERPROFILE\Virtual-Machines\WSL"
-)
+# Define folder structure
+$folderStructure = @{
+  "$env:USERPROFILE\Games"            = @()
+  "$env:USERPROFILE\Portable"         = @()
+  "$env:USERPROFILE\Virtual-Machines" = @(
+    "Hyper-V\Config",
+    "Hyper-V\Disks",
+    "Shared",
+    "Virtual-Box",
+    "WSL"
+  )
+}
 
+# Define packages to install
 $wingetPackages = @{
   Compatibility = @(
     "EclipseAdoptium.Temurin.17.JRE",
     "EclipseAdoptium.Temurin.21.JRE",
     "EclipseAdoptium.Temurin.8.JRE",
-    "Logitech.GHUB"
+    "Logitech.GHUB",
     "Microsoft.DirectX",
     "Microsoft.DotNet.DesktopRuntime.7",
     "Microsoft.DotNet.DesktopRuntime.8",
@@ -35,22 +36,31 @@ $wingetPackages = @{
   )
   Tools         = @(
     "7zip.7zip",
+    "9P7KNL5RWT25", # SysInternals Suite
+    "BleachBit.BleachBit",
+    "Cryptomator.Cryptomator",
+    "IDRIX.VeraCrypt",
     "Klocman.BulkCrapUninstaller",
     "LocalSend.LocalSend",
+    "MHNexus.HxD",
     "Microsoft.PowerShell",
     "Microsoft.PowerToys",
-    "Microsoft.VisualStudioCode",
+    "Microsoft.Sysinternals",
     "Microsoft.WindowsTerminal",
     "PuTTY.PuTTY",
     "Safing.Portmaster",
     "TechPowerUp.NVCleanstall",
     "voidtools.Everything",
     "Wagnardsoft.DisplayDriverUninstaller",
+    "winaero.tweaker",
+    "WinDirStat.WinDirStat",
     "WinSCP.WinSCP",
     "yt-dlp.yt-dlp"
   )
   Applications  = @(
+    "9NKSQGP7F2NH", # WhatsApp
     "Anki.Anki",
+    "AnyAssociation.Anytype",
     "Audacity.Audacity",
     "Bitwarden.Bitwarden",
     "Discord.Discord",
@@ -60,16 +70,16 @@ $wingetPackages = @{
     "Google.AndroidStudio",
     "HeroicGamesLauncher.HeroicGamesLauncher",
     "LibreWolf.LibreWolf",
-    "Obsidian.Obsidian",
+    "Microsoft.VisualStudioCode",
     "OBSProject.OBSStudio",
-    "Parsec.Parsec",
-    "pizzaboxer.Bloxstrap",
     "Proton.ProtonVPN",
+    "Roblox.Roblox",
     "Spotify.Spotify",
     "Valve.Steam"
   )
 }
 
+# Function to download files
 function Save-Files {
   param (
     [array]$Links,
@@ -83,17 +93,22 @@ function Save-Files {
   }
 }
 
+# Function to create directories
 function New-Directories {
   param (
-    [Parameter(Mandatory=$true)]
-    [array]$Folders
+    [hashtable]$FolderStructure
   )
-  foreach ($folder in $Folders) {
-    New-Item -ItemType Directory -Path $folder -Force | Out-Null
+  foreach ($parentFolder in $FolderStructure.Keys) {
+    New-Item -ItemType Directory -Path $parentFolder -Force | Out-Null
+    foreach ($subFolder in $FolderStructure[$parentFolder]) {
+      $fullPath = Join-Path $parentFolder $subFolder
+      New-Item -ItemType Directory -Path $fullPath -Force | Out-Null
+    }
   }
   Write-Host "Directories created."
 }
 
+# Function to add folders to Quick Access
 function Add-ToQuickAccess {
   param (
     [array]$Folders
@@ -106,30 +121,30 @@ function Add-ToQuickAccess {
   Write-Host "Folders added to Quick Access."
 }
 
+# Function to install Winget packages
 function Install-WingetPackages {
   param (
     [hashtable]$Packages
   )
     
-  $categories = @("Compatibility", "Tools", "Applications")
-    
-  foreach ($category in $categories) {
+  foreach ($category in $Packages.Keys) {
     Write-Host "Installing $category packages..."
     foreach ($package in $Packages[$category]) {
-      $command = "winget install $package"
+      $command = "winget install $package --accept-package-agreements --accept-source-agreements"
       try {
-        Write-Host "Executing: $command"
+        Write-Host "Installing: $package"
         Invoke-Expression $command
       }
       catch {
-        Write-Host "Error executing: $command`nError: $_"
+        Write-Host "Error installing: $package`nError: $_"
       }
     }
   }
   Write-Host "Package installation complete."
 }
 
+# Main execution
 Save-Files -Links $downloadLinks -Destination $downloadPath
-New-Directories -Folders ($mainFolders + $subFolders)
-Add-ToQuickAccess -Folders $mainFolders
+New-Directories -FolderStructure $folderStructure
+Add-ToQuickAccess -Folders $folderStructure.Keys
 Install-WingetPackages -Packages $wingetPackages
