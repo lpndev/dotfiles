@@ -166,9 +166,9 @@ function Install-WingetPackages {
   param (
     [hashtable]$Packages
   )
-  
+
   $orderedCategories = @("Compatibility", "Tools", "Applications")
-  $totalPackages = ($Packages.Values | Measure-Object -Sum).Sum
+  $totalPackages = ($Packages.Values | ForEach-Object { $_.Count } | Measure-Object -Sum).Sum
   $installedPackages = 0
   
   foreach ($category in $orderedCategories) {
@@ -176,9 +176,11 @@ function Install-WingetPackages {
     foreach ($package in $Packages[$category]) {
       $installedPackages++
       $percentComplete = ($installedPackages / $totalPackages) * 100
-      
+
+      # Displays progress correctly with progress bar and installation status
       Write-Progress -Activity "Installing Packages" -Status "Installing: $package" -PercentComplete $percentComplete
-      
+
+      # Winget installation command
       $command = "winget install $package --silent --disable-interactivity --accept-package-agreements --accept-source-agreements"
       try {
         $output = Invoke-Expression $command
@@ -197,6 +199,8 @@ function Install-WingetPackages {
       }
     }
   }
+
+  # Finalizing the progress bar
   Write-Progress -Activity "Installing Packages" -Completed
   Write-Host "Package installation complete." -ForegroundColor Green
 }
