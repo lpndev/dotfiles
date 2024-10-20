@@ -143,16 +143,27 @@ function Add-ToQuickAccess {
   param (
     [array]$Folders
   )
+  
   $shell = New-Object -ComObject Shell.Application
+  $quickAccess = $shell.Namespace('shell:::{679f85cb-0220-4080-b29b-5540cc05aab6}')
   foreach ($folder in $Folders) {
     try {
-      $folderItem = $shell.Namespace($folder).Self
-      if (!($folderItem.IsLink)) {
-        $folderItem.InvokeVerb('pintohome')
-        Write-Host "Added $folder to Quick Access" -ForegroundColor Green
+      # Check if the folder is already pinned
+      $isPinned = $false
+      foreach ($item in $quickAccess.Items()) {
+        if ($item.Path -eq $folder) {
+          $isPinned = $true
+          break
+        }
+      }
+      
+      if ($isPinned) {
+        Write-Host "$folder is already pinned to Quick Access" -ForegroundColor Yellow
       }
       else {
-        Write-Host "$folder is already pinned to Quick Access" -ForegroundColor Yellow
+        $folderItem = $shell.Namespace($folder).Self
+        $folderItem.InvokeVerb('pintohome')
+        Write-Host "Added $folder to Quick Access" -ForegroundColor Green
       }
     }
     catch {
