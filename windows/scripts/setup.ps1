@@ -24,15 +24,16 @@ $wingetPackages = @{
     "EclipseAdoptium.Temurin.17.JRE",
     "EclipseAdoptium.Temurin.21.JRE",
     "EclipseAdoptium.Temurin.8.JRE",
-    "Logitech.GHUB",
     "Microsoft.DirectX",
     "Microsoft.DotNet.DesktopRuntime.7",
     "Microsoft.DotNet.DesktopRuntime.8",
+    "Microsoft.PowerShell",
+    "Microsoft.PowerToys",
     "Microsoft.VCRedist.2015+.x64",
     "Microsoft.VCRedist.2015+.x86",
+    "Microsoft.WindowsTerminal",
     "Microsoft.XNARedist",
-    "OpenAL.OpenAL",
-    "seerge.g-helper"
+    "OpenAL.OpenAL"
   )
   Tools         = @(
     "7zip.7zip",
@@ -43,10 +44,6 @@ $wingetPackages = @{
     "Klocman.BulkCrapUninstaller",
     "LocalSend.LocalSend",
     "MHNexus.HxD",
-    "Microsoft.PowerShell",
-    "Microsoft.PowerToys",
-    "Microsoft.Sysinternals",
-    "Microsoft.WindowsTerminal",
     "PuTTY.PuTTY",
     "Safing.Portmaster",
     "TechPowerUp.NVCleanstall",
@@ -70,10 +67,12 @@ $wingetPackages = @{
     "Google.AndroidStudio",
     "HeroicGamesLauncher.HeroicGamesLauncher",
     "LibreWolf.LibreWolf",
+    "Logitech.GHUB",
     "Microsoft.VisualStudioCode",
     "OBSProject.OBSStudio",
     "Proton.ProtonVPN",
     "Roblox.Roblox",
+    "seerge.g-helper"
     "Spotify.Spotify",
     "Valve.Steam"
   )
@@ -126,8 +125,10 @@ function Install-WingetPackages {
   param (
     [hashtable]$Packages
   )
-    
-  foreach ($category in $Packages.Keys) {
+  
+  $orderedCategories = @("Compatibility", "Tools", "Applications")
+  
+  foreach ($category in $orderedCategories) {
     Write-Host "Installing $category packages..."
     foreach ($package in $Packages[$category]) {
       $command = "winget install $package --accept-package-agreements --accept-source-agreements"
