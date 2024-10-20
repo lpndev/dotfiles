@@ -42,7 +42,6 @@ $wingetPackages = @{
     "Cryptomator.Cryptomator",
     "Git.Git",
     "IDRIX.VeraCrypt",
-    "Klocman.BulkCrapUninstaller",
     "LocalSend.LocalSend",
     "MHNexus.HxD",
     "PuTTY.PuTTY",
@@ -72,7 +71,7 @@ $wingetPackages = @{
     "Microsoft.VisualStudioCode",
     "OBSProject.OBSStudio",
     "Proton.ProtonVPN",
-    "Roblox.Roblox",
+    "RevoUninstaller.RevoUninstaller",
     "seerge.g-helper",
     "Spotify.Spotify",
     "Valve.Steam"
