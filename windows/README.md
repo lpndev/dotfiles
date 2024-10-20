@@ -17,10 +17,7 @@ To create a bootable or multi-ISO USB drive, use one with at least 16–32 GB ca
 
 You can automate the process of installation still more! And then you can use **[this website ↗](https://schneegans.de/windows/unattend-generator/)** to generate the autounattend file by just “asking questions”. Pretty ease and modern.
 
-Use the template file to make things easier, remembering that I selected personal programs and settings. Remember to change the computer name, username and passwords.
-
-> [!CAUTION]
-> You must change the username and passwords in the autounattend.xml template.
+Use the template file to make things easier, remembering that I selected personal programs and settings.
 
 **[autounattend.xml ↗](files/autounattend.xml)**
 
@@ -54,10 +51,6 @@ Create a file named `ventoy.json` and paste the following content into it:
 }
 ```
 
-## Log in with the administrator account
-
-After installing the system, log in with the admin user; In the autounattend.xml file we create 2 users. One is an administrator and the other is a regular user. At first, we have to log in with the administrator user first, and then we can log in with our regular user. Just follow the next steps.
-
 ## Uninstall Edge first
 
 Using our `autounattend.xml` file, we were able to enable Edge to be uninstalled outside of the European Union, and for it to work properly, it must be uninstalled first.
@@ -73,21 +66,13 @@ First, we should fully update the system, including Microsoft Store apps, before
 
 Activate Windows using your official key, or if you have problems, try using this **[temporary solution ↗](https://github.com/massgravel/Microsoft-Activation-Scripts)**.
 
-## Reboot and log in with the user account
+## Reboot
 
 After updating and activating the system, we must restart it completely to avoid errors and allow the system to finish updating.
 
 ## Run setup script
 
-### Test winget before running the setup script
-
-To avoid errors in the script, we should test winget first. Try searching for some packages. If no error messages or warnings appear, we're good to go.
-
-```shell
-winget search package
-```
-
-Since the test was performed without errors or warnings, open an **🛡️ admin terminal** and paste this code:
+Open an **🛡️ admin terminal** and paste this code:
 
 ```shell
 irm https://raw.githubusercontent.com/lpndev/dotfiles/main/windows/scripts/setup.ps1 | iex
@@ -95,10 +80,10 @@ irm https://raw.githubusercontent.com/lpndev/dotfiles/main/windows/scripts/setup
 
 Now, wait for installing all the apps
 
-### Run WinUtil with 🛡️ admin terminal
+### Run WinUtil with **🛡️ admin terminal**
 
 ```shell
-irm "https://christitus.com/win" | iex
+irm https://christitus.com/win | iex
 ```
 
 > [!IMPORTANT]
