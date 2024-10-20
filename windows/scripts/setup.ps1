@@ -40,6 +40,7 @@ $wingetPackages = @{
     "9P7KNL5RWT25", # SysInternals Suite
     "BleachBit.BleachBit",
     "Cryptomator.Cryptomator",
+    "Git.Git",
     "IDRIX.VeraCrypt",
     "Klocman.BulkCrapUninstaller",
     "LocalSend.LocalSend",
