@@ -1,4 +1,7 @@
 {
+  "[powershell]": {
+    "editor.defaultFormatter": "ms-vscode.powershell"
+  },
   "breadcrumbs.enabled": false,
   "cSpell.enabled": true,
   "console-ninja.featureSet": "Community",

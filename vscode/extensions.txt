@@ -6,7 +6,6 @@ dsznajder.es7-react-js-snippets
 EditorConfig.EditorConfig
 esbenp.prettier-vscode
 github.vscode-github-actions
-Graphite.gti-vscode
 miguelsolorio.fluent-icons
 miguelsolorio.min-theme
 miguelsolorio.symbols
@@ -17,5 +16,4 @@ Prisma.prisma
 rangav.vscode-thunder-client
 ritwickdey.LiveServer
 streetsidesoftware.code-spell-checker
-WallabyJs.console-ninja
 YoavBls.pretty-ts-errors
