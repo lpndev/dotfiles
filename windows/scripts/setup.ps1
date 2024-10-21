@@ -1,14 +1,3 @@
-# Check if the script is running as an administrator
-if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
-  # Relaunch script with elevated privileges
-  Start-Process powershell "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs
-  exit
-}
-else {
-  # This part will only run if the script is elevated
-  Write-Host "Running with elevated privileges." -ForegroundColor Green
-}
-
 # Define paths and URLs
 $downloadPath = "$env:USERPROFILE\Downloads"
 $downloadLinks = @(
@@ -231,4 +220,4 @@ function Install-WingetPackages {
 Save-Files -Links $downloadLinks -Destination $downloadPath
 New-Directories -FolderStructure $folderStructure
 Add-ToQuickAccess -Folders $folderStructure.Keys
-Install-WingetPackages -Packages $wingetPackages
+Install-WingetPackages -Packages $wingetPackages.
