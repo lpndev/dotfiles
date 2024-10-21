@@ -1,3 +1,13 @@
+# Check if the script is running with elevated privileges
+if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
+  # If not elevated, relaunch the script with administrator privileges
+  Start-Process powershell "-NoProfile -ExecutionPolicy Bypass -Command `"$($MyInvocation.InvocationName)`"" -Verb RunAs
+  exit
+}
+
+# Continue with the rest of the script
+Write-Host "Script is running with elevated privileges." -ForegroundColor Green
+
 # Define paths and URLs
 $downloadPath = "$env:USERPROFILE\Downloads"
 $downloadLinks = @(
