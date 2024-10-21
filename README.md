@@ -11,3 +11,9 @@ The dotfiles in this repository include:
 - `home/`: WSL Linux shell configuration files and development environment
 - `vscode/`: Visual Studio Code settings, including theme, font, and plugin configurations.
 - `windows/`: Windows setup, automation files and powershell scripts, also personal Windows settings, also **[O&O ShutUp10++](https://www.oo-software.com/en/shutup10)** and **[WinUtil](https://github.com/ChrisTitusTech/winutil)**.
+
+### Other
+
+For a tutorial on a clean Windows installation with no bloatware, no minimum requirements (Secure Boot, TPM, etc...), consider reading the following documentation:
+
+**[Clean Windows Installation ↗](windows/README.md)**

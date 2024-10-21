@@ -37,11 +37,7 @@ Create a file named `ventoy.json` and paste the following content into it:
 
 ```json
 {
-  "control": [
-    {
-      "VTOY_DEFAULT_SEARCH_ROOT": "/ISO"
-    }
-  ],
+  "control": [{ "VTOY_DEFAULT_SEARCH_ROOT": "/ISO" }],
   "auto_install": [
     {
       "image": "/ISO/image_name_here.iso",
