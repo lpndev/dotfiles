@@ -39,7 +39,6 @@ $wingetPackages = @{
     "7zip.7zip",
     "9P7KNL5RWT25", # SysInternals Suite
     "BleachBit.BleachBit",
-    "Cryptomator.Cryptomator",
     "Git.Git",
     "IDRIX.VeraCrypt",
     "LocalSend.LocalSend",
