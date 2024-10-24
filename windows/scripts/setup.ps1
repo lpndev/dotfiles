@@ -137,37 +137,51 @@ function New-Directories {
   }
 }
 
-# Function to add folders to Quick Access
+# Function to pin items to Quick Access
 function Add-ToQuickAccess {
   param (
-    [array]$Folders
+    [array]$Folders, # Folders to pin
+    [switch]$IncludeRecycleBin  # Pin Recycle bin
   )
-  
+
   $shell = New-Object -ComObject Shell.Application
   $quickAccess = $shell.Namespace('shell:::{679f85cb-0220-4080-b29b-5540cc05aab6}')
+
+  # Helper function to pin items to Quick Access
+  function Add-ItemToQuickAccess($itemPath) {
+    # Check if the item is already pinned
+    $isPinned = $false
+    foreach ($existingItem in $quickAccess.Items()) {
+      if ($existingItem.Path -eq $itemPath) {
+        $isPinned = $true
+        break
+      }
+    }
+  
+    # Pin the item if not already pinned
+    if ($isPinned) {
+      Write-Host "$itemPath is already pinned to Quick Access" -ForegroundColor Yellow
+    }
+    else {
+      try {
+        $itemToPin = $shell.Namespace($itemPath).Self
+        $itemToPin.InvokeVerb('pintohome')
+        Write-Host "Added $itemPath to Quick Access" -ForegroundColor Green
+      }
+      catch {
+        Write-Host "Failed to add $itemPath to Quick Access: $_" -ForegroundColor Red
+      }
+    }
+  }
+
+  # Pin the Recycle Bin if specified
+  if ($IncludeRecycleBin) {
+    Add-ItemToQuickAccess 'shell:::{645FF040-5081-101B-9F08-00AA002F954E}'  # Special ID for Recycle Bin
+  }
+
+  # Pin each folder
   foreach ($folder in $Folders) {
-    try {
-      # Check if the folder is already pinned
-      $isPinned = $false
-      foreach ($item in $quickAccess.Items()) {
-        if ($item.Path -eq $folder) {
-          $isPinned = $true
-          break
-        }
-      }
-      
-      if ($isPinned) {
-        Write-Host "$folder is already pinned to Quick Access" -ForegroundColor Yellow
-      }
-      else {
-        $folderItem = $shell.Namespace($folder).Self
-        $folderItem.InvokeVerb('pintohome')
-        Write-Host "Added $folder to Quick Access" -ForegroundColor Green
-      }
-    }
-    catch {
-      Write-Host "Failed to add $folder to Quick Access: $_" -ForegroundColor Red
-    }
+    Add-ItemToQuickAccess $folder
   }
 }
 
@@ -218,5 +232,5 @@ function Install-WingetPackages {
 # Main execution
 Save-Files -Links $downloadLinks -Destination $downloadPath
 New-Directories -FolderStructure $folderStructure
-Add-ToQuickAccess -Folders $folderStructure.Keys
+Add-ToQuickAccess -Folders $folderStructure.Keys -IncludeRecycleBin
 Install-WingetPackages -Packages $wingetPackages.
