@@ -27,21 +27,23 @@ Our folder structure should look like this:
 
 ```plain
 ISO/     # Store image files (.iso) here
-TOOLS/   # Place various utilities here, such as:
-    CONFIG/   # Location for **autounattend.xml** file
-    DRIVERS/  # Store external drivers here if needed
-    PORTABLE/ # Keep useful portable apps in this folder
+TEMPLATE/   # Location for **autounattend.xml** file
 ```
 
-Create a file named `ventoy.json` and paste the following content into it:
+Create a file named `ventoy.json` in the root of the drive and paste the following content into it:
 
 ```json
 {
-  "control": [{ "VTOY_DEFAULT_SEARCH_ROOT": "/ISO" }],
+  "control": [
+    { "VTOY_DEFAULT_MENU_MODE": "1" },
+    { "VTOY_DEFAULT_SEARCH_ROOT": "/ISO" },
+    { "VTOY_WIN11_BYPASS_CHECK": "1" }
+  ],
   "auto_install": [
     {
-      "image": "/ISO/image_name_here.iso",
-      "template": ["/TOOLS/CONFIG/autounattend.xml"]
+      "image": "/ISO/windows_iso_name_here.iso",
+      "template": "/TEMPLATE/autounattend.xml",
+      "autosel": 1
     }
   ]
 }
