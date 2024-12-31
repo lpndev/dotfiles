@@ -8,8 +8,9 @@ This repository contains my **PERSONAL** dotfiles and environment settings for w
 
 The dotfiles in this repository include:
 
-- `home/`: WSL Linux shell configuration files and development environment
+- `linux/`: WSL shell configuration files and development environment
 - `vscode/`: Visual Studio Code settings, including theme, font, and plugin configurations.
+- `windows/`: Some Windows configuration such as [Glaze WM](https://github.com/glzr-io/glazewm).
 
 ### Other
 
