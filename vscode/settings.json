@@ -4,7 +4,9 @@
   },
   "breadcrumbs.enabled": false,
   "cSpell.enabled": true,
-  "console-ninja.featureSet": "Community",
+  "codeium.enableConfig": {
+    "*": false
+  },
   "diffEditor.hideUnchangedRegions.enabled": true,
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.accessibilitySupport": "off",
@@ -88,7 +90,6 @@
   "tailwindCSS.experimental.classRegex": [
     ["tv\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
   ],
-  "telemetry.telemetryLevel": "off",
   "terminal.integrated.enablePersistentSessions": false,
   "terminal.integrated.env.linux": {},
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
@@ -120,6 +121,7 @@
   "workbench.layoutControl.enabled": false,
   "workbench.list.smoothScrolling": true,
   "workbench.localHistory.enabled": false,
+  "workbench.navigationControl.enabled": false,
   "workbench.productIconTheme": "fluent-icons",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.tree.enableStickyScroll": false
