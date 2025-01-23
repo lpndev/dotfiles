@@ -1,0 +1,116 @@
+:root {
+  /* Indigo */
+  --accent: rgb(99, 102, 241); /* indigo-500 */
+  --accent-light: rgb(199, 210, 254); /* indigo-200 */
+  --background: rgb(30, 27, 75); /* indigo-950 */
+  --foreground: rgb(238, 242, 255); /* indigo-50 */
+  --glassy: rgba(129, 141, 248, 0.4); /* indigo-400/40 */
+
+  /* Rose */
+  /* --accent: rgb(244, 63, 94); /* rose-500 */
+  /* --accent-light: rgb(254, 205, 211); /* rose-200 */
+  /* --background: rgb(76, 5, 25); /* rose-950 */
+  /* --foreground: rgb(255, 241, 242); /* rose-50 */
+  /* --glassy: rgba(251, 113, 134, 0.4); /* rose-400/40 */
+
+  /* Zinc */
+  /* --accent: rgb(113, 113, 122); /* zinc-500 */
+  /* --accent-light: rgb(228, 228, 231); /* zinc-200 */
+  /* --background: rgb(9, 9, 11); /* zinc-950 */
+  /* --foreground: rgb(250, 250, 250); /* zinc-50 */
+  /* --glassy: rgba(161, 161, 170, 0.4); /* zinc-400/40 */
+}
+
+/* Base */
+* {
+  font: 600 13px 'JetBrainsMono NF';
+}
+.icon {
+  color: var(--accent-light);
+  font-size: 16px;
+  margin-right: 3px;
+}
+.label {
+  color: var(--foreground);
+  padding: 0 2px;
+}
+.widget {
+  background: var(--glassy);
+  border-radius: 13px;
+  margin: 0 2px;
+  padding: 0 6px;
+}
+
+/* Widgets /
+/* Komorebi Workspaces */
+.komorebi-workspaces {
+  padding: 0 2px;
+}
+.komorebi-workspaces .offline-status {
+  color: var(--foreground);
+  font: 700 11px;
+  padding: 0 4px;
+}
+.komorebi-workspaces .ws-btn {
+  background: var(--accent);
+  border-radius: 10px;
+  color: var(--foreground);
+  height: 20px;
+  margin: 0 2px;
+  width: 20px;
+}
+.komorebi-workspaces .ws-btn.active {
+  background: var(--accent-light);
+  color: var(--background);
+  width: 40px;
+}
+.komorebi-workspaces .ws-btn.populated {
+  background: var(--glassy);
+  color: var(--accent-light);
+}
+
+/* Power Menu */
+.power-menu-popup .button {
+  background-color: rgba(255, 255, 255, 0.01);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  height: 120px;
+  margin: 8px;
+  width: 160px;
+}
+.power-menu-popup .button .icon {
+  color: var(--foreground);
+  font-size: 34px;
+  margin-bottom: -20px;
+}
+.power-menu-popup .button .label {
+  color: var(--foreground);
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: -20px;
+}
+.power-menu-popup .button.cancel {
+  background-color: var(--glassy);
+  border: transparent;
+}
+.power-menu-popup .button.cancel.hover {
+  background-color: var(--glassy);
+}
+.power-menu-popup .button.hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.power-menu-widget {
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+.power-menu-widget .label {
+  background-color: rgba(255, 255, 255, 0.004);
+  border-radius: 13px;
+  color: var(--foreground);
+  font-size: 16px;
+  padding: 0 8px 0 4px;
+}
+.uptime {
+  color: var(--foreground);
+}

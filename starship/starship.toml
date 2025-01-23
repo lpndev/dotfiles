@@ -1,0 +1,84 @@
+format ="$os$username$hostname$directory$all"
+
+add_newline = true
+scan_timeout = 10
+palette = "tw"
+
+[palettes.tw]
+slate = "#64748b"
+gray = "#6b7280"
+zinc = "#71717a"
+neutral = "#737373"
+stone = "#78716c"
+red = "#ef4444"
+orange = "#f97316"
+amber = "#f59e0b"
+yellow = "#eab308"
+lime = "#84cc16"
+green = "#22c55e"
+emerald = "#10b981"
+teal = "#14b8a6"
+cyan = "#06b6d4"
+sky = "#0ea5e9"
+blue = "#3b82f6"
+indigo = "#6366f1"
+violet = "#8b5cf6"
+purple = "#a855f7"
+fuchsia = "#d946ef"
+pink = "#ec4899"
+rose = "#f43f5e"
+
+[character]
+success_symbol = "[╰─](zinc)[](zinc)"
+error_symbol = "[╰─](zinc)[](red)"
+
+[directory]
+style = "indigo"
+read_only = "  "
+home_symbol = "󰉋 ~ "
+
+[hostname]
+ssh_only = false
+ssh_symbol = " "
+format = "[$ssh_symbol$hostname](white) "
+
+[os]
+format = "[╭─](zinc) [$symbol](white)"
+disabled = false
+
+[os.symbols]
+Alpine = " "
+Amazon = " "
+Android = " "
+Arch = " "
+CentOS = " "
+Debian = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+Linux = " "
+Macos = " "
+Manjaro = " "
+Mint = " "
+NixOS = " "
+openSUSE = " "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+Ubuntu = " "
+Unknown = " "
+Windows = " "
+
+[package]
+format = "[$symbol$version](white)"
+symbol = "📦 "
+version_format = "v${minor}"
+disabled = false
+
+[username]
+style_root = "red"
+style_user = "indigo"
+format = "[$user](indigo)@"
+show_always = true

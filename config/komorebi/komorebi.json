@@ -1,0 +1,64 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.33/schema.json",
+  "app_specific_configuration_path": "$Env:KOMOREBI_CONFIG_HOME/applications.json",
+  "border": true,
+  "border_colours": {
+    "monocle": "#818cf8",
+    "single": "#818cf8",
+    "unfocused": "#52525b"
+  },
+  "border_offset": -1,
+  "border_width": 4,
+  "cross_monitor_move_behaviour": "Insert",
+  "default_container_padding": 2,
+  "default_workspace_padding": 2,
+  "monitors": [
+    {
+      "workspaces": [
+        {
+          "layout": "BSP",
+          "name": "1"
+        },
+        {
+          "layout": "BSP",
+          "name": "2"
+        },
+        {
+          "layout": "BSP",
+          "name": "3"
+        },
+        {
+          "layout": "BSP",
+          "name": "4"
+        },
+        {
+          "layout": "BSP",
+          "name": "5"
+        },
+        {
+          "layout": "BSP",
+          "name": "6"
+        },
+        {
+          "layout": "BSP",
+          "name": "7"
+        },
+        {
+          "layout": "BSP",
+          "name": "8"
+        },
+        {
+          "layout": "BSP",
+          "name": "9"
+        }
+      ]
+    }
+  ],
+  "mouse_follows_focus": false,
+  "stackbar": {
+    "mode": "Never"
+  },
+  "transparency": true,
+  "transparency_alpha": 240,
+  "window_hiding_behaviour": "Cloak"
+}

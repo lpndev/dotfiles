@@ -1,0 +1,163 @@
+watch_stylesheet: true
+watch_config: true
+debug: true
+hide_taskbar: false
+
+komorebi:
+  start_command: 'komorebic start --whkd'
+  stop_command: 'komorebic stop --whkd'
+  reload_command: 'komorebic stop --whkd && komorebic start --whkd'
+
+bars:
+  primary-bar:
+    enabled: true
+    screens: ['*']
+    class_name: 'yasb-bar'
+
+    alignment:
+      position: 'top'
+      center: false
+
+    blur_effect:
+      enabled: false
+      acrylic: false
+      dark_mode: false
+      round_corners: false
+      border_color: System
+
+    window_flags:
+      always_on_top: false
+      windows_app_bar: true
+
+    dimensions:
+      width: '100%'
+      height: 26
+
+    padding:
+      top: 4
+      left: 2
+      bottom: 2
+      right: 2
+
+    widgets:
+      left: ['komorebi_workspaces', 'active_window']
+      center: ['clock', 'notifications']
+      right: ['cpu', 'memory', 'battery', 'volume', 'power_menu']
+
+widgets:
+  komorebi_workspaces:
+    type: 'komorebi.workspaces.WorkspaceWidget'
+    options:
+      label_zero_index: false
+      hide_empty_workspaces: true
+      hide_if_offline: false
+      animation: true
+      container_padding:
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+
+  active_window:
+    type: 'yasb.active_window.ActiveWindowWidget'
+    options:
+      label: '{win[title]}'
+      label_icon: true
+      label_icon_size: 14
+      max_length: 36
+      max_length_ellipsis: '…'
+      monitor_exclusive: true
+
+  clock:
+    type: 'yasb.clock.ClockWidget'
+    options:
+      label: '{%I:%M %p %a}'
+      label_alt: '{%A, %d %B %Y %H:%M}'
+      callbacks:
+        on_right: 'exec explorer.exe shell:AppsFolder\Microsoft.WindowsAlarms_8wekyb3d8bbwe!App'
+
+  notifications:
+    type: 'yasb.custom.CustomWidget'
+    options:
+      label: "<span>\uf0f3</span>"
+      label_alt: "<span>\uf49a</span>"
+      class_name: 'notifications'
+      callbacks:
+        on_left: 'exec notification_center'
+
+  cpu:
+    type: 'yasb.cpu.CpuWidget'
+    options:
+      label: "<span>\uf4bc</span> {info[percent][total]}%"
+      update_interval: 2000
+
+  # gpu:
+  #   type: 'yasb.custom.CustomWidget'
+  #   options:
+  #     label: "<span>\udb82\udcae</span> {data}℃"
+  #     label_alt: "<span>\udb82\udcae</span> {data}℃"
+  #     class_name: 'gpu'
+  #     exec_options:
+  #       run_cmd: 'powershell nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader'
+  #       run_interval: 10000
+  #       return_format: 'string'
+  #       hide_empty: true
+
+  memory:
+    type: 'yasb.memory.MemoryWidget'
+    options:
+      label: "<span>\uefc5</span> {virtual_mem_free}"
+      label_alt: "<span>\uefc5</span> VIRT: {virtual_mem_percent}% SWAP: {swap_mem_percent}%"
+      update_interval: 5000
+      callbacks:
+        on_left: 'toggle_label'
+      memory_thresholds:
+        low: 25
+        medium: 50
+        high: 90
+
+  battery:
+    type: 'yasb.battery.BatteryWidget'
+    options:
+      label: '<span>{icon}</span>{percent}%'
+      label_alt: '<span>{icon}</span> {percent}% | time: {time_remaining}'
+      charging_options:
+        icon_format: '{charging_icon}'
+      status_icons:
+        icon_charging: "\udb80\udc84"
+        icon_critical: "\uf244"
+        icon_low: "\uf243"
+        icon_medium: "\uf242"
+        icon_high: "\uf241"
+        icon_full: "\uf240"
+
+  volume:
+    type: 'yasb.volume.VolumeWidget'
+    options:
+      label: '<span>{icon}</span> {level}'
+      label_alt: '{volume}'
+      volume_icons:
+        - "\ueee8"
+        - "\uf026"
+        - "\uf027"
+        - "\uf027"
+        - "\uf028"
+      callbacks:
+        on_right: 'exec cmd.exe /c start ms-settings:sound'
+
+  power_menu:
+    type: 'yasb.power_menu.PowerMenuWidget'
+    options:
+      label: "\uf011"
+      uptime: True
+      blur: False
+      blur_background: True
+      animation_duration: 300
+      button_row: 5
+      buttons:
+        lock: ["\uea75", 'Lock']
+        signout: ["\uf08b", 'Sign out']
+        sleep: ["\udb82\udd04", 'Sleep']
+        shutdown: ["\uf011", 'Shut Down']
+        restart: ["\uead2", 'Restart']
+        cancel: ["\udb81\udf3a", 'Cancel']
