@@ -41,8 +41,8 @@ bars:
 
     widgets:
       left: ['komorebi_workspaces', 'active_window']
-      center: ['clock', 'notifications']
-      right: ['cpu', 'memory', 'battery', 'volume', 'power_menu']
+      center: ['clock']
+      right: ['cpu', 'memory', 'battery', 'microphone', 'volume', 'power_menu']
 
 widgets:
   komorebi_workspaces:
@@ -76,32 +76,11 @@ widgets:
       callbacks:
         on_right: 'exec explorer.exe shell:AppsFolder\Microsoft.WindowsAlarms_8wekyb3d8bbwe!App'
 
-  notifications:
-    type: 'yasb.custom.CustomWidget'
-    options:
-      label: "<span>\uf0f3</span>"
-      label_alt: "<span>\uf49a</span>"
-      class_name: 'notifications'
-      callbacks:
-        on_left: 'exec notification_center'
-
   cpu:
     type: 'yasb.cpu.CpuWidget'
     options:
       label: "<span>\uf4bc</span> {info[percent][total]}%"
       update_interval: 2000
-
-  # gpu:
-  #   type: 'yasb.custom.CustomWidget'
-  #   options:
-  #     label: "<span>\udb82\udcae</span> {data}℃"
-  #     label_alt: "<span>\udb82\udcae</span> {data}℃"
-  #     class_name: 'gpu'
-  #     exec_options:
-  #       run_cmd: 'powershell nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader'
-  #       run_interval: 10000
-  #       return_format: 'string'
-  #       hide_empty: true
 
   memory:
     type: 'yasb.memory.MemoryWidget'
@@ -130,6 +109,19 @@ widgets:
         icon_medium: "\uf242"
         icon_high: "\uf241"
         icon_full: "\uf240"
+
+  microphone:
+    type: 'yasb.microphone.MicrophoneWidget'
+    options:
+      label: '<span>{icon}</span> {level}'
+      label_alt: '<span>{icon}</span> {level}'
+      icons:
+        normal: "\udb80\udf6c"
+        muted: "\udb80\udf6d"
+      callbacks:
+        on_left: 'toggle_mute'
+        on_middle: 'do_nothing'
+        on_right: 'exec cmd.exe /c start ms-settings:sound'
 
   volume:
     type: 'yasb.volume.VolumeWidget'
