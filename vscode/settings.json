@@ -11,6 +11,7 @@
   "editor.lineHeight": 1.8,
   "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
+  "editor.selectionHighlight": false,
   "editor.smoothScrolling": true,
   "editor.stickyScroll.enabled": false,
   "editor.suggestSelection": "first",
