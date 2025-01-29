@@ -1,7 +1,7 @@
 watch_stylesheet: true
 watch_config: true
-debug: true
-hide_taskbar: false
+debug: false
+hide_taskbar: true
 
 komorebi:
   start_command: 'komorebic start --whkd'
@@ -41,7 +41,7 @@ bars:
 
     widgets:
       left: ['komorebi_workspaces', 'active_window']
-      center: ['clock']
+      center: ['clock', 'apps']
       right: ['cpu', 'memory', 'battery', 'microphone', 'volume', 'power_menu']
 
 widgets:
@@ -51,7 +51,7 @@ widgets:
       label_zero_index: false
       hide_empty_workspaces: true
       hide_if_offline: false
-      animation: true
+      animation: false
       container_padding:
         top: 0
         left: 0
@@ -75,6 +75,22 @@ widgets:
       label_alt: '{%A, %d %B %Y %H:%M}'
       callbacks:
         on_right: 'exec explorer.exe shell:AppsFolder\Microsoft.WindowsAlarms_8wekyb3d8bbwe!App'
+
+  apps:
+    type: 'yasb.applications.ApplicationsWidget'
+    options:
+      label: '{data}'
+      app_list:
+        - { icon: "\uf0a2", launch: 'notification_center' }
+        - { icon: "\ueb51", launch: 'quick_settings' }
+        - { icon: "\uf422", launch: 'search' }
+        - { icon: "\uf489", launch: 'wt' }
+        - { icon: "\uf121", launch: 'code' }
+      container_padding:
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
 
   cpu:
     type: 'yasb.cpu.CpuWidget'
