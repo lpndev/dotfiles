@@ -14,7 +14,7 @@ config.font = wezterm.font {
 }
 config.font_size = 13
 config.default_cursor_style = 'BlinkingBar'
-config.window_background_opacity = 0.6
+config.window_background_opacity = 0.7
 config.win32_system_backdrop = "Acrylic"
 config.window_decorations = 'RESIZE|INTEGRATED_BUTTONS'
 config.hide_tab_bar_if_only_one_tab = true
@@ -46,12 +46,10 @@ config.keys = {
 
 -- Colors
 config.colors = {
-  background = '#262626',
+  background = '#0a0a0a',
   foreground = '#d4d4d4',
   cursor_bg = '#d4d4d4',
   cursor_fg = '#262626',
-  ansi = { '#262626', '#e06c75', '#98c379', '#e5c07b', '#61afef', '#c678dd', '#56b6c2', '#d4d4d4' },
-  brights = { '#262626', '#e06c75', '#98c379', '#e5c07b', '#61afef', '#c678dd', '#56b6c2', '#d4d4d4' },
   cursor_border = '#d4d4d4',
   selection_bg = '#404040',
   selection_fg = '#d4d4d4',
