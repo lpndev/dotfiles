@@ -1,34 +1,34 @@
 .shell powershell
 
-alt + q : komorebic close
 alt + m : komorebic minimize
+alt + q : komorebic close
 
 # Focus windows
-alt + j : komorebic focus left
-alt + k : komorebic focus down
-alt + i : komorebic focus up
+alt + h : komorebic focus left
+alt + j : komorebic focus down
+alt + k : komorebic focus up
 alt + l : komorebic focus right
 
 # Move windows
 alt + shift + h      : komorebic move left
-alt + shift + l      : komorebic move right
-alt + shift + h      : komorebic move up
 alt + shift + j      : komorebic move down
+alt + shift + k      : komorebic move up
+alt + shift + l      : komorebic move right
 alt + shift + return : komorebic promote
 
 # Resize
-alt + oem_plus          : komorebic resize-axis horizontal increase
 alt + oem_minus         : komorebic resize-axis horizontal decrease
-alt + shift + oem_plus  : komorebic resize-axis vertical increase
+alt + oem_plus          : komorebic resize-axis horizontal increase
 alt + shift + oem_minus : komorebic resize-axis vertical decrease
+alt + shift + oem_plus  : komorebic resize-axis vertical increase
 
 # Manipulate windows
-alt + t         : komorebic toggle-float
 alt + shift + f : komorebic toggle-monocle
+alt + t         : komorebic toggle-float
 
 # Window manager options
-alt + shift + r : komorebic retile
 alt + p         : komorebic toggle-pause
+alt + shift + r : komorebic retile
 
 # Layouts
 alt + x : komorebic flip-layout horizontal
