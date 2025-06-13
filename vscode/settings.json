@@ -1,6 +1,12 @@
 {
+  "[svelte]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "breadcrumbs.enabled": false,
   "cSpell.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports.biome": "explicit"
+  },
   "editor.cursorBlinking": "smooth",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -16,25 +22,34 @@
   "editor.stickyScroll.enabled": false,
   "editor.suggestSelection": "first",
   "editor.tabSize": 2,
-  "eslint.format.enable": true,
   "explorer.compactFolders": true,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmPasteNative": false,
   "explorer.sortOrder": "foldersNestsFiles",
   "extensions.ignoreRecommendations": true,
+  "files.autoSave": "afterDelay",
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
   "git.openRepositoryInParentFolders": "never",
   "javascript.suggest.autoImports": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
+  "notebook.defaultFormatter": "esbenp.prettier-vscode",
   "powershell.powerShellDefaultVersion": "PowerShell",
-  "prettier.bracketSameLine": false,
   "prettier.jsxSingleQuote": true,
-  "prettier.semi": false,
+  "prettier.singleAttributePerLine": true,
   "prettier.singleQuote": true,
+  "prettier.vueIndentScriptAndStyle": true,
   "remote.autoForwardPorts": false,
   "remote.restoreForwardedPorts": false,
   "search.quickOpen.includeHistory": false,
   "security.workspace.trust.untrustedFiles": "newWindow",
+  "svelte.enable-ts-plugin": true,
+  "svelte.plugin.svelte.defaultScriptLanguage": "ts",
+  "svelte.plugin.svelte.format.config.singleQuote": true,
+  "tailwindCSS.experimental.classRegex": [
+    ["([\"'`][^\"'`]*.*?[\"'`])", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  ],
   "telemetry.telemetryLevel": "off",
   "terminal.integrated.enablePersistentSessions": false,
   "terminal.integrated.fontSize": 12,
@@ -67,7 +82,5 @@
   "workbench.list.smoothScrolling": true,
   "workbench.localHistory.enabled": false,
   "workbench.navigationControl.enabled": false,
-  "workbench.productIconTheme": "fluent-icons",
-  "workbench.startupEditor": "newUntitledFile",
-  "workbench.statusBar.visible": false
+  "workbench.startupEditor": "newUntitledFile"
 }

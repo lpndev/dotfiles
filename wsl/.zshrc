@@ -9,7 +9,10 @@ alias fetch="fastfetch"
 alias ll="ls -ahl"
 alias ls="eza --icons"
 alias rm="rm -rfv"
+alias scan-files="ncdu / --exclude /mnt/"
+alias scan-links="sudo rmlint /home"
 alias sudo="sudo "
+alias update-clean="yay -Syu --noconfirm && yay -Scc --noconfirm && paccache -r && rm ~/.cache/* && sudo pacman -Rns $(pacman -Qtdq) --noconfirm"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"

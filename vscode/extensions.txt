@@ -1,26 +1,21 @@
-code --install-extension bradlc.vscode-tailwindcss
-code --install-extension codeium.codeium
-code --install-extension dbaeumer.vscode-eslint   
-code --install-extension dsznajder.es7-react-js-snippets
-code --install-extension editorconfig.editorconfig
-code --install-extension esbenp.prettier-vscode   
-code --install-extension github.vscode-github-actions
-code --install-extension miguelsolorio.fluent-icons
-code --install-extension miguelsolorio.min-theme  
-code --install-extension miguelsolorio.symbols    
-code --install-extension ms-azuretools.vscode-docker
-code --install-extension ms-vscode-remote.remote-containers
-code --install-extension ms-vscode-remote.remote-ssh
-code --install-extension ms-vscode-remote.remote-ssh-edit
-code --install-extension ms-vscode-remote.remote-wsl
-code --install-extension ms-vscode-remote.vscode-remote-extensionpack
-code --install-extension ms-vscode.powershell     
-code --install-extension ms-vscode.remote-explorer
-code --install-extension ms-vscode.remote-server  
-code --install-extension prisma.prisma
-code --install-extension rangav.vscode-thunder-client
-code --install-extension ritwickdey.liveserver    
-code --install-extension streetsidesoftware.code-spell-checker
-code --install-extension unifiedjs.vscode-mdx     
-code --install-extension vue.volar
-code --install-extension yoavbls.pretty-ts-errors
+# on windows
+dsznajder.es7-react-js-snippets
+miguelsolorio.fluent-icons
+miguelsolorio.min-theme
+miguelsolorio.symbols
+ms-vscode-remote.vscode-remote-extensionpack
+
+# on wsl
+astro-build.astro-vscode
+bradlc.vscode-tailwindcss
+dbaeumer.vscode-eslint
+esbenp.prettier-vscode
+github.vscode-github-actions
+ms-azuretools.vscode-docker
+Prisma.prisma
+rangav.vscode-thunder-client
+ritwickdey.LiveServer
+streetsidesoftware.code-spell-checker
+svelte.svelte-vscode
+unifiedjs.vscode-mdx
+YoavBls.pretty-ts-errors

@@ -83,7 +83,7 @@ widgets:
         - { icon: "\uf0a2", launch: 'notification_center' }
         - { icon: "\ueb51", launch: 'quick_settings' }
         - { icon: "\uf422", launch: 'search' }
-        - { icon: "\uf489", launch: 'wt' }
+        - { icon: "\uf489", launch: 'wezterm' }
         - { icon: "\uf121", launch: 'code' }
       container_padding:
         top: 0

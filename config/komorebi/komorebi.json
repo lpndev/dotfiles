@@ -3,12 +3,12 @@
   "app_specific_configuration_path": "$Env:KOMOREBI_CONFIG_HOME/applications.json",
   "border": true,
   "border_colours": {
-    "monocle": "#818cf8",
-    "single": "#818cf8",
-    "unfocused": "#52525b"
+    "monocle": "#71717a",
+    "single": "#71717a",
+    "unfocused": "#27272a"
   },
   "border_offset": -1,
-  "border_width": 4,
+  "border_width": 3,
   "cross_monitor_move_behaviour": "Insert",
   "default_container_padding": 2,
   "default_workspace_padding": 2,
