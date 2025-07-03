@@ -1,3 +1,3 @@
 # Dotfiles
 
-![](./github/preview.png)
+![](./.github/preview.png)
