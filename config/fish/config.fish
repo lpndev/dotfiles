@@ -21,3 +21,5 @@ end
 if type -q fzf
     fzf --fish | source
 end
+
+~/.local/bin/mise activate fish | source
