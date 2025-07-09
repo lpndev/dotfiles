@@ -3,8 +3,8 @@
   "app_specific_configuration_path": "$Env:KOMOREBI_CONFIG_HOME/applications.json",
   "border": true,
   "border_colours": {
-    "monocle": "#71717a",
-    "single": "#71717a",
+    "monocle": "#f43f5e",
+    "single": "#f43f5e",
     "unfocused": "#27272a"
   },
   "border_offset": -1,
