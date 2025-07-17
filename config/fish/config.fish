@@ -10,6 +10,8 @@ if test -f ~/.config/fish/aliases.fish
     source ~/.config/fish/aliases.fish
 end
 
+set --export STARSHIP_CONFIG ~/.config/starship/starship.toml
+
 if type -q starship
     starship init fish | source
 end
