@@ -1,0 +1,124 @@
+{
+  "spacing": 8,
+
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["clock", "custom/notifications"],
+  "modules-right": [
+    "pulseaudio",
+    "cpu",
+    "memory",
+    "temperature",
+    "battery",
+    "privacy",
+    "tray",
+    "custom/power"
+  ],
+
+  "hyprland/window": {
+    "max-length": 42,
+    "icon": true,
+    "icon-size": 18
+  },
+
+  "clock": {
+    "format": " {:%I:%M %p}",
+    "interval": 60,
+    "tooltip": true,
+    "tooltip-format": "{:%A, %d %B %Y %H:%M}"
+  },
+
+  "custom/notifications": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "󱅫 ",
+      "none": " ",
+      "dnd-notification": " ",
+      "dnd-none": " "
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "sleep 0.1 && swaync-client -t -sw",
+    "on-click-right": "sleep 0.1 && swaync-client -d -sw",
+    "escape": true
+  },
+
+  "pulseaudio": {
+    "format": " {volume}%",
+    "format-muted": " Muted",
+    "tooltip": true,
+    "scroll-step": 5,
+    "icon-size": 18,
+    "on-click": "pavucontrol"
+  },
+
+  "cpu": {
+    "format": " {usage}%",
+    "tooltip": true,
+    "interval": 15,
+    "icon-size": 18
+  },
+
+  "memory": {
+    "format": " {used}G",
+    "tooltip-format": "{used} / {total} G",
+    "tooltip": true,
+    "interval": 5,
+    "icon-size": 18
+  },
+
+  "temperature": {
+    "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+    "critical-threshold": 80,
+    "format": "{icon} {temperatureC}°C",
+    "format-icons": ["", "", ""]
+  },
+
+  "battery": {
+    "interval": 60,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{icon} {time}%",
+    "icon-size": 18,
+    "format-icons": [" ", " ", " ", " ", " "],
+    "max-length": 22
+  },
+
+  "privacy": {
+    "icon-size": 18,
+    "modules": [
+      {
+        "type": "screenshare",
+        "tooltip": true,
+        "tooltip-icon-size": 24
+      },
+      {
+        "type": "audio-out",
+        "tooltip": true,
+        "tooltip-icon-size": 24
+      },
+      {
+        "type": "audio-in",
+        "tooltip": true,
+        "tooltip-icon-size": 24
+      }
+    ]
+  },
+
+  "tray": {
+    "spacing": 4,
+    "icon-size": 20
+  },
+
+  "custom/power": {
+    "format": "󰤆 ",
+    "tooltip": false,
+    "on-click": "wlogout --protocol layer-shell"
+  }
+}

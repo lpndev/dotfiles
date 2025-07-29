@@ -1,0 +1,74 @@
+configuration {
+  font: "JetBrainsMono Nerd Font Propo 14";
+  show-icons: true;
+  icon-theme: "kora";
+  modi: "drun,run,window";
+}
+
+* {
+  border: 0;
+  font: "JetBrainsMono Nerd Font Propo 14";
+  font-weight: bold;
+  text-color: #e5e5e5;
+  background-color: transparent;
+}
+
+window {
+  background-color: rgba(38, 38, 38, 0.2);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+mainbox {
+  background-color: rgba(38, 38, 38, 0.2);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+inputbar {
+  background-color: rgba(38, 38, 38, 0.6);
+  border-radius: 12px;
+  padding: 8px 16px;
+  text-color: #e5e5e5;
+}
+
+prompt {
+  background-color: transparent;
+  text-color: #e5e5e5;
+}
+
+listview {
+  background-color: transparent;
+  border-radius: 12px;
+  padding: 8px 0px;
+}
+
+element {
+  background-color: rgba(38, 38, 38, 0.2);
+  border-radius: 12px;
+  padding: 6px 12px;
+  text-color: #e5e5e5;
+  margin: 2px 0px;
+}
+
+element selected {
+  background-color: rgba(38, 38, 38, 0.6);
+  text-color: #ffffff;
+  border-radius: 12px;
+  padding: 6px 24px;
+}
+
+element-icon {
+  size: 1.2em;
+  margin: 0px 10px 0px 0px;
+}
+
+message {
+  background-color: transparent;
+  text-color: #e5e5e5;
+}
+
+textbox {
+  background-color: transparent;
+  text-color: #e5e5e5;
+}

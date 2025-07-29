@@ -1,7 +1,7 @@
-alias cat='bat --paging=always --color=always'
-alias cd='z'
-alias find='fd --color=always --type f --hidden --no-ignore-vcs'
-alias ll='eza -alh --color=always --group-directories-first --icons'
-alias ls='eza -a --color=always --group-directories-first --icons'
-alias lt='eza -aT --color=always --group-directories-first --icons'
-alias ripgrep='rg --color=always --line-number --smart-case --hidden --no-heading'
+alias cat="bat --paging=always --color=always"
+alias cd="z"
+alias cp="cp -v"
+alias find="fd --color=always --type f --hidden --no-ignore-vcs"
+alias ls="eza -ahl --color=always --group-directories-first --icons"
+alias lt="eza -aT --color=always --group-directories-first --icons"
+alias ripgrep="rg --color=always --line-number --smart-case --hidden --no-heading"
