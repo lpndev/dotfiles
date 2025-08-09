@@ -1,82 +1,41 @@
-format ="$os$username$hostname$directory$all"
+format = '$username$hostname$directory$all'
 
 add_newline = false
+palette = 'default'
 scan_timeout = 10
-palette = "tw"
 
-[palettes.tw]
-amber = "#f59e0b"
-blue = "#3b82f6"
-cyan = "#06b6d4"
-emerald = "#10b981"
-fuchsia = "#d946ef"
-gray = "#6b7280"
-green = "#22c55e"
-indigo = "#6366f1"
-lime = "#84cc16"
-neutral = "#737373"
-orange = "#f97316"
-pink = "#ec4899"
-purple = "#a855f7"
-red = "#ef4444"
-rose = "#f43f5e"
-sky = "#0ea5e9"
-slate = "#64748b"
-stone = "#78716c"
-teal = "#14b8a6"
-violet = "#8b5cf6"
-yellow = "#eab308"
-zinc = "#71717a"
-
-[character]
-success_symbol = '[❯](indigo)'
-
-[directory]
-style = "indigo"
-read_only = "  "
-home_symbol = "󰉋 ~ "
-
-[hostname]
-ssh_only = false
-ssh_symbol = " "
-format = "[$ssh_symbol$hostname](white) "
-
-[os]
-disabled = false
-
-[os.symbols]
-Alpine = " "
-Amazon = " "
-Android = " "
-Arch = " "
-CentOS = " "
-Debian = " "
-EndeavourOS = " "
-Fedora = " "
-FreeBSD = " "
-Garuda = "󰛓 "
-Gentoo = " "
-Linux = " "
-Macos = " "
-Manjaro = " "
-Mint = " "
-NixOS = " "
-openSUSE = " "
-Pop = " "
-Raspbian = " "
-Redhat = " "
-Ubuntu = " "
-Unknown = " "
-Windows = " "
-
-[package]
-format = "[$symbol$version](white)"
-symbol = "📦 "
-version_format = "v${minor}"
-disabled = false
+[palettes.default]
+accent = '#c6ba75'
+blue = '#c6ba75'
+purple = '#c6ba75'
+yellow = '#c6ba75'
+green = '#c6ba75'
+cyan = '#c6ba75'
+white = '#f9f9f1'
+bright-blue = '#c6ba75'
+bright-purple = '#c6ba75'
+bright-yellow = '#c6ba75'
+bright-green = '#c6ba75'
+bright-cyan = '#c6ba75'
+bright-white = '#f9f9f1'
 
 [username]
-style_root = "red"
-style_user = "indigo"
-format = "[$user](indigo)@"
+format = '[$user](fg:accent)'
+style_root = 'red'
 show_always = true
+
+[hostname]
+format = '[@](fg:white)[$hostname](fg:accent)'
+ssh_only = false
+
+[directory]
+style = "white"
+format = "[$read_only]($read_only_style) [$path](fg:white) "
+read_only = " 󰌾"
+read_only_style = "red"
+truncate_to_repo = false
+truncation_length = 3
+fish_style_pwd_dir_length = 1
+
+[character]
+success_symbol = '[❯](fg:white)'
