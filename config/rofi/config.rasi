@@ -1,13 +1,13 @@
 configuration {
-  font: "JetBrainsMono Nerd Font Propo 14";
+  font: "JetBrainsMono Nerd Font 14";
   show-icons: true;
   icon-theme: "kora";
-  modi: "drun,run,window";
+  modi: "drun,run,window,emoji";
 }
 
 * {
   border: 0;
-  font: "JetBrainsMono Nerd Font Propo 14";
+  font: "JetBrainsMono Nerd Font 14";
   font-weight: bold;
   text-color: #e5e5e5;
   background-color: transparent;
