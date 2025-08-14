@@ -1,7 +1,13 @@
 alias cat='bat --paging=always --color=always'
 alias cd='z'
-alias find='fd --color=always --type f --hidden --no-ignore-vcs'
-alias ll='eza -alh --color=always --group-directories-first --icons'
-alias ls='eza -al --color=always --group-directories-first --icons'
+
+alias la='eza -a --color=always --group-directories-first --icons'
+alias ll='eza -alh --color=always --group-directories-first --icons --git --time-style=long-iso'
+alias ls='eza --color=always --group-directories-first --icons'
 alias lt='eza -aT --color=always --group-directories-first --icons'
-alias ripgrep='rg --color=always --line-number --smart-case --hidden --no-heading'
+
+alias reboot='systemctl reboot'
+alias reload='source ~/.config/fish/config.fish'
+alias shutdown='systemctl poweroff'
+alias snapshot='sudo timeshift --create --comments "snapshot-"(date +%Y%m%d)'
+alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'

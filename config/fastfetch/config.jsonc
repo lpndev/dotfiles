@@ -13,9 +13,12 @@
     "color": {
       "1": "#c6ba75"
     },
-    "source": "~/.config/fastfetch/ascii.txt"
+    "width": 30,
+    "source": "~/.config/fastfetch/image.png",
+    "type": "kitty-direct"
   },
   "modules": [
+    "break",
     {
       "key": "     Host",
       "type": "host"
