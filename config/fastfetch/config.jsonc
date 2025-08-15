@@ -7,15 +7,18 @@
       "separator": "#f9f9f1",
       "title": "#f9f9f1"
     },
-    "separator": ": "
+    "separator": " > "
   },
   "logo": {
     "color": {
       "1": "#c6ba75"
     },
-    "width": 30,
-    "source": "~/.config/fastfetch/image.png",
-    "type": "kitty-direct"
+    "padding": {
+      "top": 1
+    },
+    "source": "~/.config/fastfetch/ascii.png",
+    "type": "kitty-direct",
+    "width": 40
   },
   "modules": [
     "break",
@@ -86,8 +89,7 @@
     },
     "break",
     {
-      "paddingLeft": 2,
-      "symbol": "background",
+      "symbol": "circle",
       "type": "colors"
     }
   ]
