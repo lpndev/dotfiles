@@ -10,18 +10,11 @@
     "separator": " > "
   },
   "logo": {
-    "color": {
-      "1": "#c6ba75"
-    },
-    "padding": {
-      "top": 1
-    },
     "source": "~/.config/fastfetch/ascii.png",
-    "type": "kitty-direct",
+    "type": "iterm",
     "width": 40
   },
   "modules": [
-    "break",
     {
       "key": "     Host",
       "type": "host"
