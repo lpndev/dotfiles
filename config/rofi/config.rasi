@@ -1,74 +1,77 @@
 configuration {
-  font: "JetBrainsMono Nerd Font 14";
+  font: "JetBrainsMono Nerd Font 12";
   show-icons: true;
-  icon-theme: "kora";
+  icon-theme: "Colloid";
   modi: "drun,run,window,emoji";
 }
 
-* {
-  border: 0;
-  font: "JetBrainsMono Nerd Font 14";
-  font-weight: bold;
-  text-color: #e5e5e5;
-  background-color: transparent;
-}
-
 window {
-  background-color: rgba(38, 38, 38, 0.2);
-  border-radius: 16px;
-  padding: 20px;
+    background-color: rgba(26,17,11,0.8);
+    border: 0;
+    border-radius: 12px;
+    width: 40%;
+    height: 40%;
 }
 
 mainbox {
-  background-color: rgba(38, 38, 38, 0.2);
-  border-radius: 16px;
-  padding: 16px;
+    padding: 4px;
+    border: 0;
 }
 
 inputbar {
-  background-color: rgba(38, 38, 38, 0.6);
-  border-radius: 12px;
-  padding: 8px 16px;
-  text-color: #e5e5e5;
+    color: rgb(249,249,241);
+    background-color: rgb(26,17,11);
+    padding: 6px 8px;
+    border-radius: 8px;
+    border: 0;
 }
 
 prompt {
-  background-color: transparent;
-  text-color: #e5e5e5;
+    color: rgb(249,249,241);
+    border: 0;
 }
 
-listview {
-  background-color: transparent;
-  border-radius: 12px;
-  padding: 8px 0px;
+entry {
+    border: 0;
+    color: rgba(249,249,241,0.8);
 }
 
-element {
-  background-color: rgba(38, 38, 38, 0.2);
-  border-radius: 12px;
-  padding: 6px 12px;
-  text-color: #e5e5e5;
-  margin: 2px 0px;
-}
-
-element selected {
-  background-color: rgba(38, 38, 38, 0.6);
-  text-color: #ffffff;
-  border-radius: 12px;
-  padding: 6px 24px;
-}
-
-element-icon {
-  size: 1.2em;
-  margin: 0px 10px 0px 0px;
+case-indicator {
+    border: 0;
 }
 
 message {
-  background-color: transparent;
-  text-color: #e5e5e5;
+    border: 0;
 }
 
-textbox {
-  background-color: transparent;
-  text-color: #e5e5e5;
+listview {
+    border: 0;
+    scrollbar: false;
+}
+
+element {
+    border-color: transparent;
+}
+
+element normal normal, element normal urgent, element normal active, element alternate normal, element alternate urgent, element alternate active, element selected normal, element selected urgent, element selected active {
+    background-color: transparent;
+}
+
+element-text {
+    border: 0;
+    color: rgba(249,249,241,0.6);
+}
+
+element-text selected {
+    border: 0;
+    color: rgb(198,186,117);
+    text-decoration: underline;
+}
+
+sidebar {
+    border: 0;
+}
+
+button {
+    border: 0;
 }
