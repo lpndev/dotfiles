@@ -1,17 +1,12 @@
-# on windows
-dsznajder.es7-react-js-snippets
-miguelsolorio.fluent-icons
-miguelsolorio.min-theme
-miguelsolorio.symbols
-ms-vscode-remote.vscode-remote-extensionpack
-
-# on wsl
 astro-build.astro-vscode
 bradlc.vscode-tailwindcss
 dbaeumer.vscode-eslint
+dsznajder.es7-react-js-snippets
 esbenp.prettier-vscode
 github.vscode-github-actions
-ms-azuretools.vscode-docker
+miguelsolorio.fluent-icons
+miguelsolorio.min-theme
+miguelsolorio.symbols
 Prisma.prisma
 rangav.vscode-thunder-client
 ritwickdey.LiveServer

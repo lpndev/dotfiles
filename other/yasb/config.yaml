@@ -40,7 +40,7 @@ bars:
 
     widgets:
       left: ['komorebi_workspaces', 'active_window']
-      center: ['clock', 'apps']
+      center: ['clock']
       right: ['cpu', 'memory', 'battery', 'microphone', 'volume', 'power_menu']
 
 widgets:
