@@ -6,8 +6,6 @@ alias ll='eza -alh --color=always --group-directories-first --icons --git --time
 alias ls='eza --color=always --group-directories-first --icons'
 alias lt='eza -aT --color=always --group-directories-first --icons'
 
-alias reboot='systemctl reboot'
 alias reload='source ~/.config/fish/config.fish'
-alias shutdown='systemctl poweroff'
 alias snapshot='sudo timeshift --create --comments "snapshot-"(date +%Y%m%d)'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
