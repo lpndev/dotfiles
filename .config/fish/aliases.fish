@@ -7,5 +7,5 @@ alias ls='eza --color=always --group-directories-first --icons'
 alias lt='eza -aT --color=always --group-directories-first --icons'
 
 alias reload='source ~/.config/fish/config.fish'
-alias snapshot='sudo timeshift --create --comments "snapshot-"(date +%Y%m%d)'
+alias snapshot='sudo snapper create --description "snapshot-$(date +%Y%m%d)"'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
