@@ -1,16 +1,14 @@
 ## Dotfiles
 
-<img src="/.github/preview.png" alt="Desktop Image" width="600">
+<img src="./preview.png" alt="Desktop Image" width="600">
 
-### Arch Linux Installation
+### Arch installation
 
-If you want to know how I install and set up Arch Linux from scratch, including partitioning, base system installation, and configuring my environment, check out the detailed guide in this [README.md file](/arch/README.md).
+I wrote a full and detailed guide on how I install and set up Arch Linux from scratch, including partitioning, base system installation, and configuring my environment, check out the [detailed guide](https://dub.sh/arch-linux-install).
 
-### Windows Installation
+### Dual booting
 
-Interested in how I install Windows, optimize it, and remove bloatware for a clean and efficient system? I maintain a separate repository that covers everything step-by-step:
-
-[https://github.com/lpndev/wpis](https://github.com/lpndev/wpis)
+If you have interest in dual booting with Windows, I maintain a [separate repository](https://github.com/lpndev/wpis) that covers everything step-by-step like optimize it, and remove bloatware for a clean and efficient system.
 
 ### Contribute
 
