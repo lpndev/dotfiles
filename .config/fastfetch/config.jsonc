@@ -11,7 +11,7 @@
   },
   "logo": {
     "source": "~/.config/fastfetch/ascii.png",
-    "type": "iterm",
+    "type": "auto",
     "width": 40
   },
   "modules": [

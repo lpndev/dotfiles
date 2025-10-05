@@ -1,12 +1,12 @@
 configuration {
-  font: "JetBrainsMono Nerd Font 12";
-  show-icons: true;
-  icon-theme: "Colloid";
-  modi: "drun,run,window,emoji";
+    font: "JetBrainsMono Nerd Font 14";
+    show-icons: true;
+    icon-theme: "Colloid";
+    modi: "drun,window,emoji";
 }
 
 window {
-    background-color: rgba(26,17,11,0.8);
+    background-color: rgba(0, 0, 0, 0.4);
     border: 0;
     border-radius: 12px;
     width: 40%;
@@ -14,13 +14,13 @@ window {
 }
 
 mainbox {
-    padding: 4px;
+    padding: 6px;
     border: 0;
 }
 
 inputbar {
-    color: rgb(249,249,241);
-    background-color: rgb(26,17,11);
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.2);
     padding: 6px 8px;
     border-radius: 8px;
     border: 0;
@@ -33,7 +33,7 @@ prompt {
 
 entry {
     border: 0;
-    color: rgba(249,249,241,0.8);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 case-indicator {
@@ -49,17 +49,13 @@ listview {
     scrollbar: false;
 }
 
-element {
-    border-color: transparent;
-}
-
 element normal normal, element normal urgent, element normal active, element alternate normal, element alternate urgent, element alternate active, element selected normal, element selected urgent, element selected active {
     background-color: transparent;
 }
 
 element-text {
     border: 0;
-    color: rgba(249,249,241,0.6);
+    color: rgba(255, 255, 255, 0.6);
 }
 
 element-text selected {
