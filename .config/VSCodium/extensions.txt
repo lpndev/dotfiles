@@ -1,0 +1,13 @@
+bradlc.vscode-tailwindcss
+castrogusttavo.symbols
+dbaeumer.vscode-eslint
+esbenp.prettier-vscode
+formulahendry.auto-close-tag
+formulahendry.auto-rename-tag
+github.github-vscode-theme
+miguelsolorio.fluent-icons
+redhat.vscode-yaml
+streetsidesoftware.code-spell-checker
+svelte.svelte-vscode
+tamasfe.even-better-toml
+timonwong.shellcheck
