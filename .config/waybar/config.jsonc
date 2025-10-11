@@ -1,30 +1,115 @@
 {
   "spacing": 8,
 
+  // modules
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
-  "modules-center": ["clock", "custom/notifications"],
+  "modules-center": [],
   "modules-right": [
-    "pulseaudio",
-    "cpu",
-    "memory",
-    "temperature",
-    "battery",
     "privacy",
-    "tray",
-    "custom/power"
+    "group/usage",
+    "battery",
+    "group/settings",
+    "group/menu"
   ],
 
+  // left
   "hyprland/window": {
     "max-length": 42,
     "icon": true,
     "icon-size": 18
   },
 
+  // right
+  "privacy": {
+    "icon-spacing": 8,
+    "icon-size": 14,
+    "modules": [{ "type": "screenshare" }, { "type": "audio-in" }]
+  },
+
+  // usage
+  "group/usage": {
+    "orientation": "horizontal",
+    "modules": ["cpu", "memory"]
+  },
+
+  "cpu": {
+    "format": " {usage}%",
+    "tooltip": true,
+    "interval": 10,
+    "icon-size": 18,
+    "on-click": "kitty -e btop"
+  },
+
+  "memory": {
+    "format": " {used}G",
+    "tooltip-format": "{used} / {total} G",
+    "tooltip": true,
+    "interval": 10,
+    "icon-size": 18,
+    "on-click": "kitty -e btop"
+  },
+
+  // battery
+  "battery": {
+    "interval": 60,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon}{capacity}%",
+    "format-charging": "{capacity}%",
+    "format-plugged": "{capacity}%",
+    "format-alt": "{icon} {time}%",
+    "icon-size": 18,
+    "format-icons": [" ", " ", " ", " ", " "]
+  },
+
+  // settings
+  "group/settings": {
+    "orientation": "horizontal",
+    "modules": ["network", "bluetooth", "pulseaudio"]
+  },
+
+  "network": {
+    "format-wifi": "󰖩 ",
+    "format-ethernet": " ",
+    "format-disconnected": "󰖪 ",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+    "tooltip-format-ethernet": "Ethernet {ifname}",
+    "tooltip-format-disconnected": "Disconnected",
+    "on-click": "nm-connection-editor"
+  },
+
+  "bluetooth": {
+    "format-connected": "",
+    "format-on": "",
+    "format-disabled": "󰂲",
+    "format-off": "󰂲",
+    "tooltip-format": "{num_connections} Device {device_alias} {device_battery_percentage}%",
+    "on-click": "blueman-manager"
+  },
+
+  "pulseaudio": {
+    "format": " ",
+    "format-muted": " ",
+    "tooltip-format": "{volume}% Volume",
+    "scroll-step": 5,
+    "icon-size": 18,
+    "on-click": "pavucontrol"
+  },
+
+  // menu
+  "group/menu": {
+    "orientation": "horizontal",
+    "modules": ["clock", "custom/notifications"]
+  },
+
   "clock": {
-    "format": " {:%I:%M %p}",
+    "format": "󰥔 {:%I:%M %p}",
     "interval": 60,
     "tooltip": true,
-    "tooltip-format": "{:%A, %d %B %Y %H:%M}"
+    "tooltip-format": "{:%A, %d %B %Y %H:%M}",
+    "on-click": "sleep 0.1 && swaync-client -t -sw"
   },
 
   "custom/notifications": {
@@ -32,9 +117,9 @@
     "format": "{icon}",
     "format-icons": {
       "notification": "󱅫 ",
-      "none": " ",
+      "none": "",
       "dnd-notification": " ",
-      "dnd-none": " "
+      "dnd-none": ""
     },
     "return-type": "json",
     "exec-if": "which swaync-client",
@@ -42,83 +127,5 @@
     "on-click": "sleep 0.1 && swaync-client -t -sw",
     "on-click-right": "sleep 0.1 && swaync-client -d -sw",
     "escape": true
-  },
-
-  "pulseaudio": {
-    "format": " {volume}%",
-    "format-muted": " Muted",
-    "tooltip": true,
-    "scroll-step": 5,
-    "icon-size": 18,
-    "on-click": "pavucontrol"
-  },
-
-  "cpu": {
-    "format": " {usage}%",
-    "tooltip": true,
-    "interval": 15,
-    "icon-size": 18
-  },
-
-  "memory": {
-    "format": " {used}G",
-    "tooltip-format": "{used} / {total} G",
-    "tooltip": true,
-    "interval": 5,
-    "icon-size": 18
-  },
-
-  "temperature": {
-    "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
-    "critical-threshold": 80,
-    "format": "{icon} {temperatureC}°C",
-    "format-icons": ["", "", ""]
-  },
-
-  "battery": {
-    "interval": 60,
-    "states": {
-      "warning": 30,
-      "critical": 15
-    },
-    "format": "{icon} {capacity}%",
-    "format-charging": " {capacity}%",
-    "format-plugged": " {capacity}%",
-    "format-alt": "{icon} {time}%",
-    "icon-size": 18,
-    "format-icons": [" ", " ", " ", " ", " "],
-    "max-length": 22
-  },
-
-  "privacy": {
-    "icon-size": 18,
-    "modules": [
-      {
-        "type": "screenshare",
-        "tooltip": true,
-        "tooltip-icon-size": 24
-      },
-      {
-        "type": "audio-out",
-        "tooltip": true,
-        "tooltip-icon-size": 24
-      },
-      {
-        "type": "audio-in",
-        "tooltip": true,
-        "tooltip-icon-size": 24
-      }
-    ]
-  },
-
-  "tray": {
-    "spacing": 4,
-    "icon-size": 20
-  },
-
-  "custom/power": {
-    "format": "󰤆 ",
-    "tooltip": false,
-    "on-click": "wlogout --protocol layer-shell"
   }
 }

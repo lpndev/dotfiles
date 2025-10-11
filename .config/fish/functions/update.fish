@@ -13,6 +13,6 @@ function update
     end
   end
 
-  yay -Syu --noconfirm
+  yay -Syu
   touch $stamp
 end
