@@ -19,7 +19,7 @@ window#waybar.empty #window {
 .modules-left,
 .modules-center,
 .modules-right {
-  padding: 0.2rem 0.4rem;
+  padding: 0.4rem;
 }
 
 /* workspaces */
