@@ -1,13 +1,14 @@
 /* bar */
 * {
+  all: initial;
   border: none;
   font-family: "JetBrainsMono Nerd Font";
   font-size: 14px;
 }
 
 #waybar {
+  opacity: 0.8;
   background-color: rgba(0, 0, 0, 0.1);
-  color: rgba(255, 255, 255, 0.8);
 }
 
 window#waybar.empty #window {
@@ -33,19 +34,18 @@ window#waybar.empty #window {
 #workspaces button {
   color: rgba(255, 255, 255, 0.8);
   opacity: 0.8;
-  padding: 0;
+  padding: 0.2rem 0.6rem;
 }
 
 #workspaces button:hover {
-  background-color: rgba(0, 0, 0, 0.26);
+  opacity: 1;
 }
 
 #workspaces button.active {
-  background-color: rgb(198, 186, 117);
+  background-color: rgba(198, 186, 117, 0.45);
   border-radius: 0.6rem;
-  color: rgb(0, 0, 0);
   opacity: 1;
-  padding: 0 0.8rem;
+  padding: 0 1.2rem;
 }
 
 /* groups */
@@ -68,7 +68,10 @@ window#waybar.empty #window {
 #bluetooth,
 #pulseaudio,
 #battery,
-#clock,
-#notifications {
+#clock {
   padding: 0 0.4rem;
+}
+
+#custom-notifications {
+  padding-left: 0.4rem;
 }

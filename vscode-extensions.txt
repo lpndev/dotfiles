@@ -4,8 +4,11 @@ dbaeumer.vscode-eslint
 esbenp.prettier-vscode
 formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
+formulahendry.code-runner
 github.github-vscode-theme
 miguelsolorio.fluent-icons
+ms-azuretools.vscode-containers
+ms-azuretools.vscode-docker
 redhat.vscode-yaml
 streetsidesoftware.code-spell-checker
 svelte.svelte-vscode
