@@ -1,0 +1,4 @@
+include ~/.config/sway/environment.conf
+include ~/.config/sway/general.conf
+include ~/.config/sway/keybindings.conf
+include /etc/sway/config.d/*

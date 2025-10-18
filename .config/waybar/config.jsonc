@@ -2,7 +2,7 @@
   "spacing": 8,
 
   // modules
-  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-left": ["sway/workspaces", "sway/window"],
   "modules-center": [],
   "modules-right": [
     "privacy",
@@ -13,107 +13,109 @@
   ],
 
   // left
-  "hyprland/window": {
-    "max-length": 42,
+  "sway/window": {
+    "icon-size": 18,
     "icon": true,
-    "icon-size": 18
+    "max-length": 42
   },
 
   // right
   "privacy": {
-    "icon-spacing": 8,
     "icon-size": 14,
+    "icon-spacing": 8,
     "modules": [{ "type": "screenshare" }, { "type": "audio-in" }]
   },
 
   // usage
   "group/usage": {
-    "orientation": "horizontal",
-    "modules": ["cpu", "memory"]
+    "modules": ["cpu", "memory"],
+    "orientation": "horizontal"
   },
 
   "cpu": {
     "format": " {usage}%",
-    "tooltip": true,
-    "interval": 10,
     "icon-size": 18,
-    "on-click": "kitty -e btop"
+    "interval": 10,
+    "on-click": "kitty -e btop",
+    "tooltip": true
   },
 
   "memory": {
     "format": " {used}G",
-    "tooltip-format": "{used} / {total} G",
-    "tooltip": true,
-    "interval": 10,
     "icon-size": 18,
-    "on-click": "kitty -e btop"
+    "interval": 10,
+    "on-click": "kitty -e btop",
+    "tooltip-format": "{used} / {total} G",
+    "tooltip": true
   },
 
   // battery
   "battery": {
+    "format-alt": "{icon} {time}%",
+    "format-charging": "{capacity}%",
+    "format-icons": [" ", " ", " ", " ", " "],
+    "format-plugged": "{capacity}%",
+    "format": "{icon}{capacity}%",
+    "icon-size": 18,
     "interval": 60,
     "states": {
       "warning": 30,
       "critical": 15
-    },
-    "format": "{icon}{capacity}%",
-    "format-charging": "{capacity}%",
-    "format-plugged": "{capacity}%",
-    "format-alt": "{icon} {time}%",
-    "icon-size": 18,
-    "format-icons": [" ", " ", " ", " ", " "]
+    }
   },
 
   // settings
   "group/settings": {
-    "orientation": "horizontal",
-    "modules": ["network", "bluetooth", "pulseaudio"]
+    "modules": ["network", "bluetooth", "pulseaudio"],
+    "orientation": "horizontal"
   },
 
   "network": {
-    "format-wifi": "󰖩 ",
-    "format-ethernet": " ",
     "format-disconnected": "󰖪 ",
-    "tooltip-format-wifi": "{essid} ({signalStrength}%)",
-    "tooltip-format-ethernet": "Ethernet {ifname}",
+    "format-ethernet": " ",
+    "format-wifi": "󰖩 ",
+    "on-click": "nm-connection-editor",
     "tooltip-format-disconnected": "Disconnected",
-    "on-click": "nm-connection-editor"
+    "tooltip-format-ethernet": "Ethernet {ifname}",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)"
   },
 
   "bluetooth": {
     "format-connected": "",
-    "format-on": "",
     "format-disabled": "󰂲",
     "format-off": "󰂲",
-    "tooltip-format": "{num_connections} Device {device_alias} {device_battery_percentage}%",
-    "on-click": "blueman-manager"
+    "format-on": "",
+    "on-click": "blueman-manager",
+    "tooltip-format": "{num_connections} Device {device_alias} {device_battery_percentage}%"
   },
 
   "pulseaudio": {
-    "format": " ",
     "format-muted": " ",
-    "tooltip-format": "{volume}% Volume",
-    "scroll-step": 5,
+    "format": " ",
     "icon-size": 18,
-    "on-click": "pavucontrol"
+    "on-click": "pavucontrol",
+    "scroll-step": 5,
+    "tooltip-format": "{volume}% Volume"
   },
 
   // menu
   "group/menu": {
-    "orientation": "horizontal",
-    "modules": ["clock", "custom/notifications"]
+    "modules": ["clock", "custom/notifications"],
+    "orientation": "horizontal"
   },
 
   "clock": {
     "format": "󰥔 {:%I:%M %p}",
     "interval": 60,
-    "tooltip": true,
+    "on-click": "sleep 0.1 && swaync-client -t -sw",
     "tooltip-format": "{:%A, %d %B %Y %H:%M}",
-    "on-click": "sleep 0.1 && swaync-client -t -sw"
+    "tooltip": true
   },
 
   "custom/notifications": {
-    "tooltip": false,
+    "escape": true,
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
     "format": "{icon}",
     "format-icons": {
       "notification": "󱅫 ",
@@ -121,11 +123,9 @@
       "dnd-notification": " ",
       "dnd-none": ""
     },
-    "return-type": "json",
-    "exec-if": "which swaync-client",
-    "exec": "swaync-client -swb",
-    "on-click": "sleep 0.1 && swaync-client -t -sw",
     "on-click-right": "sleep 0.1 && swaync-client -d -sw",
-    "escape": true
+    "on-click": "sleep 0.1 && swaync-client -t -sw",
+    "return-type": "json",
+    "tooltip": false
   }
 }

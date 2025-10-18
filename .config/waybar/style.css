@@ -1,14 +1,14 @@
 /* bar */
 * {
-  all: initial;
+  all: unset;
   border: none;
   font-family: "JetBrainsMono Nerd Font";
   font-size: 14px;
 }
 
 #waybar {
-  opacity: 0.8;
-  background-color: rgba(0, 0, 0, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 window#waybar.empty #window {
@@ -20,14 +20,13 @@ window#waybar.empty #window {
 .modules-left,
 .modules-center,
 .modules-right {
-  padding: 0.4rem;
+  padding: 0.6rem;
 }
 
 /* workspaces */
 #workspaces {
   background-color: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 0.2rem;
 }
 
@@ -41,11 +40,11 @@ window#waybar.empty #window {
   opacity: 1;
 }
 
-#workspaces button.active {
-  background-color: rgba(198, 186, 117, 0.45);
-  border-radius: 0.6rem;
+#workspaces button.focused {
+  background-color: rgb(198, 186, 117);
+  color: rgb(0, 0, 0);
   opacity: 1;
-  padding: 0 1.2rem;
+  padding: 0.2rem 1.2rem;
 }
 
 /* groups */
@@ -55,8 +54,7 @@ window#waybar.empty #window {
 #settings,
 #menu {
   background-color: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 0 0.2rem;
 }
 
