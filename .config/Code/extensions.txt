@@ -1,3 +1,4 @@
+bmewburn.vscode-intelephense-client
 bradlc.vscode-tailwindcss
 castrogusttavo.symbols
 dbaeumer.vscode-eslint

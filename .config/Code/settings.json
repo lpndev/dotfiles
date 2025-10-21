@@ -1,4 +1,7 @@
 {
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  },
   "code-runner.clearPreviousOutput": true,
   "code-runner.ignoreSelection": true,
   "code-runner.runInTerminal": true,
