@@ -1,6 +1,6 @@
 ## Dotfiles
 
-<img src="./preview.png" alt="Desktop Image" width="600">
+<img src="./preview.png" alt="Desktop Image">
 
 ### Arch installation
 
@@ -9,6 +9,12 @@ I wrote a full and detailed guide on how I install and set up Arch Linux from sc
 ### Dual booting
 
 If you have interest in dual booting with Windows, I maintain a [separate repository](https://github.com/lpndev/wpis) that covers everything step-by-step like optimize it, and remove bloatware for a clean and efficient system.
+
+### Import VSCode extensions
+
+```shell
+code --list-extensions > "~/.config/Code - OSS/extensions.txt"
+```
 
 ### Contribute
 
