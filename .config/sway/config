@@ -2,11 +2,10 @@
 include ~/.config/sway/environment.conf
 include ~/.config/sway/general.conf
 include ~/.config/sway/keybindings.conf
-include /etc/sway/config.d/*
 
-# sway idle
+# swayidle + swaylock
 exec swayidle -w \
-  timeout 1200 'swaylock' \
-  timeout 1260 'swaymsg "output * dpms off"' \
+  timeout 1200 'swaylock -f' \
+  timeout 1230 'swaymsg "output * dpms off"' \
   resume 'swaymsg "output * dpms on"' \
-  before-sleep 'swaylock'
+  before-sleep 'swaylock -f'

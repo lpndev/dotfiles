@@ -2,18 +2,20 @@ configuration {
     font: "JetBrainsMono Nerd Font 14";
     show-icons: true;
     icon-theme: "Colloid";
-    modi: "drun,window,emoji";
+    modi: "drun,window,emoji,power-menu:~/.config/rofi/scripts/power-menu.sh";
+    sidebar-mode: true;
 }
 
 window {
-    background-color: rgba(0, 0, 0, 0.8);
-    border: 0;
-    width: 40%;
+    background-color: rgb(0, 0, 0);
+    border: 1px;
+    border-color: rgb(198, 186, 117);
+    width: 30%;
     height: 40%;
 }
 
 mainbox {
-    padding: 6px;
+    padding: 8px;
     border: 0;
 }
 
@@ -21,16 +23,19 @@ inputbar {
     color: rgba(255, 255, 255, 0.8);
     padding: 6px 8px;
     border: 0;
+    background-color: transparent;
 }
 
 prompt {
-    color: rgb(249,249,241);
+    color: rgba(255, 255, 255, 0.8);
     border: 0;
+    background-color: transparent;
 }
 
 entry {
     border: 0;
     color: rgba(255, 255, 255, 0.8);
+    background-color: transparent;
 }
 
 case-indicator {
@@ -44,27 +49,45 @@ message {
 listview {
     border: 0;
     scrollbar: false;
+    lines: 8;
+    spacing: 4px;
 }
 
-element normal normal, element normal urgent, element normal active, element alternate normal, element alternate urgent, element alternate active, element selected normal, element selected urgent, element selected active {
+element {
+    padding: 4px 8px;
+    border: 0;
     background-color: transparent;
+}
+
+element normal normal, element normal urgent, element normal active,
+element alternate normal, element alternate urgent, element alternate active {
+    background-color: transparent;
+}
+
+element selected normal, element selected urgent, element selected active {
+    background-color: transparent;
+    border: 0;
 }
 
 element-text {
     border: 0;
     color: rgba(255, 255, 255, 0.6);
+    background-color: transparent;
 }
 
 element-text selected {
     border: 0;
-    color: rgb(198,186,117);
-    text-decoration: underline;
-}
-
-sidebar {
-    border: 0;
+    color: rgb(198, 186, 117);
 }
 
 button {
     border: 0;
+    margin: 2px;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+button selected {
+    color: rgb(198, 186, 117);
+    background-color: transparent;
 }

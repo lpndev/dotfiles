@@ -15,16 +15,24 @@ window#waybar.empty #window {
   border: none;
 }
 
+tooltip,
+menu {
+  background: rgb(0, 0, 0);
+  border: 1px solid rgb(198, 186, 117);
+  padding: 0.4rem;
+}
+
 /* modules */
 .modules-left,
 .modules-right {
-  padding: 0.6rem;
-  padding-bottom: 0;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  padding-top: 0.6rem;
 }
 
 /* workspaces */
 #workspaces {
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgb(0, 0, 0);
   border: 1px solid rgb(198, 186, 117);
 }
 
@@ -46,17 +54,19 @@ window#waybar.empty #window {
 }
 
 /* groups */
+#tray,
 #window,
 #usage,
 #battery,
 #settings,
 #menu {
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgb(0, 0, 0);
   border: 1px solid rgb(198, 186, 117);
   padding: 0 0.2rem;
 }
 
 /* widgets */
+#tray,
 #window,
 #cpu,
 #memory,

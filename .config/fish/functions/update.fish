@@ -14,5 +14,6 @@ function update
   end
 
   yay -Syu
+  flatpak update
   touch $stamp
 end
