@@ -1,6 +1,6 @@
 ## Dotfiles
 
-<img src="./preview.png" alt="Desktop Image">
+<img src="./github/preview.png" alt="Desktop Image">
 
 ### Arch installation
 
