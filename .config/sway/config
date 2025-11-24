@@ -1,7 +1,14 @@
+# monitors
+output eDP-1 {
+  background ~/Pictures/Wallpapers/background.png fill
+  resolution 1920x1200@165Hz
+}
+
 # configs
 include ~/.config/sway/environment.conf
 include ~/.config/sway/general.conf
 include ~/.config/sway/keybindings.conf
+include ~/.config/sway/windowrules.conf
 
 # swayidle + swaylock
 exec swayidle -w \
