@@ -1,16 +1,16 @@
 colourful: true
 
 filekinds:
-  block_device: { foreground: '#c6ba75', is_bold: true }
-  char_device: { foreground: '#c6ba75', is_bold: true }
-  directory: { foreground: '#c6ba75', is_bold: true }
+  block_device: { foreground: "#c6ba75", is_bold: true }
+  char_device: { foreground: "#c6ba75", is_bold: true }
+  directory: { foreground: "#c6ba75", is_bold: true }
   executable: { foreground: Green, is_bold: true }
-  mount_point: { foreground: '#c6ba75', is_bold: true, is_underline: true }
+  mount_point: { foreground: "#c6ba75", is_bold: true, is_underline: true }
   normal: { foreground: Default }
-  pipe: { foreground: '#c6ba75' }
+  pipe: { foreground: "#c6ba75" }
   socket: { foreground: Red, is_bold: true }
-  special: { foreground: '#c6ba75' }
-  symlink: { foreground: '#c6ba75' }
+  special: { foreground: "#c6ba75" }
+  symlink: { foreground: "#c6ba75" }
 
 perms:
   attribute: { foreground: Default, is_dimmed: true }
@@ -29,29 +29,29 @@ perms:
   user_write: { foreground: Default, is_dimmed: true, is_bold: true }
 
 size:
-  major: { foreground: '#c6ba75', is_bold: true }
-  minor: { foreground: '#c6ba75' }
-  number_byte: { foreground: '#c6ba75', is_bold: true }
-  number_giga: { foreground: '#c6ba75', is_bold: true }
-  number_huge: { foreground: '#c6ba75', is_bold: true }
-  number_kilo: { foreground: '#c6ba75', is_bold: true }
-  number_mega: { foreground: '#c6ba75', is_bold: true }
-  unit_byte: { foreground: '#c6ba75' }
-  unit_giga: { foreground: '#c6ba75' }
-  unit_huge: { foreground: '#c6ba75' }
-  unit_kilo: { foreground: '#c6ba75' }
-  unit_mega: { foreground: '#c6ba75' }
+  major: { foreground: "#c6ba75", is_bold: true }
+  minor: { foreground: "#c6ba75" }
+  number_byte: { foreground: "#c6ba75", is_bold: true }
+  number_giga: { foreground: "#c6ba75", is_bold: true }
+  number_huge: { foreground: "#c6ba75", is_bold: true }
+  number_kilo: { foreground: "#c6ba75", is_bold: true }
+  number_mega: { foreground: "#c6ba75", is_bold: true }
+  unit_byte: { foreground: "#c6ba75" }
+  unit_giga: { foreground: "#c6ba75" }
+  unit_huge: { foreground: "#c6ba75" }
+  unit_kilo: { foreground: "#c6ba75" }
+  unit_mega: { foreground: "#c6ba75" }
 
 users:
-  group_other: { foreground: '#c6ba75' }
+  group_other: { foreground: "#c6ba75" }
   group_root: { foreground: Red }
-  group_yours: { foreground: '#c6ba75', is_bold: true }
-  user_other: { foreground: '#c6ba75' }
+  group_yours: { foreground: "#c6ba75", is_bold: true }
+  user_other: { foreground: "#c6ba75" }
   user_root: { foreground: Red }
-  user_you: { foreground: '#c6ba75', is_bold: true }
+  user_you: { foreground: "#c6ba75", is_bold: true }
 
 links:
-  multi_link_file: { foreground: Red, background: '#c6ba75' }
+  multi_link_file: { foreground: Red, background: "#c6ba75" }
   normal: { foreground: Red, is_bold: true }
 
 git:
@@ -60,36 +60,36 @@ git:
   ignored: { foreground: Default, is_dimmed: true }
   modified: { foreground: Blue }
   new: { foreground: Green }
-  renamed: { foreground: '#c6ba75' }
+  renamed: { foreground: "#c6ba75" }
   typechange: { foreground: Purple }
 
 git_repo:
   branch_main: { foreground: Green }
-  branch_other: { foreground: '#c6ba75' }
+  branch_other: { foreground: "#c6ba75" }
   git_clean: { foreground: Green }
-  git_dirty: { foreground: '#c6ba75' }
+  git_dirty: { foreground: "#c6ba75" }
 
 security_context:
   colon: { foreground: Default, is_dimmed: true }
-  range: { foreground: '#c6ba75' }
-  role: { foreground: '#c6ba75' }
-  typ: { foreground: '#c6ba75' }
-  user: { foreground: '#c6ba75' }
+  range: { foreground: "#c6ba75" }
+  role: { foreground: "#c6ba75" }
+  typ: { foreground: "#c6ba75" }
+  user: { foreground: "#c6ba75" }
 
 file_type:
-  build: { foreground: '#c6ba75', is_bold: true, is_underline: true }
-  compiled: { foreground: '#c6ba75' }
+  build: { foreground: "#c6ba75", is_bold: true, is_underline: true }
+  compiled: { foreground: "#c6ba75" }
   compressed: { foreground: Red }
   crypto: { foreground: Green, is_bold: true }
-  document: { foreground: '#c6ba75' }
+  document: { foreground: "#c6ba75" }
   image: { foreground: Purple }
-  lossless: { foreground: '#c6ba75', is_bold: true }
-  music: { foreground: '#c6ba75' }
-  source: { foreground: '#c6ba75', is_bold: true }
+  lossless: { foreground: "#c6ba75", is_bold: true }
+  music: { foreground: "#c6ba75" }
+  source: { foreground: "#c6ba75", is_bold: true }
   temp: { foreground: White }
   video: { foreground: Purple, is_bold: true }
 
-blocks: { foreground: '#c6ba75' }
+blocks: { foreground: "#c6ba75" }
 date: { foreground: Default, is_dimmed: true }
 flags: { foreground: Default }
 header: { foreground: Default, is_underline: true }
@@ -100,4 +100,4 @@ punctuation: { foreground: DarkGray, is_bold: true }
 broken_path_overlay: { foreground: Default, is_underline: true }
 broken_symlink: { foreground: Red }
 control_char: { foreground: Red }
-symlink_path: { foreground: '#c6ba75' }
+symlink_path: { foreground: "#c6ba75" }

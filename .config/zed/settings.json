@@ -1,26 +1,47 @@
 {
-  "features": {
-    "edit_prediction_provider": "copilot"
-  },
-  "middle_click_paste": false,
-  "tab_size": 2,
   "autosave": {
     "after_delay": {
       "milliseconds": 1000
     }
   },
-  "ui_font_weight": 400,
-  "ui_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_size": 16,
+  "features": {
+    "edit_prediction_provider": "copilot"
+  },
+  "gutter": {
+    "folds": true
+  },
+  "middle_click_paste": false,
+  "outline_panel": {
+    "auto_fold_dirs": false,
+    "folder_icons": true
+  },
+  "project_panel": {
+    "hide_root": true,
+    "auto_fold_dirs": false
+  },
+  "restore_on_file_reopen": false,
+  "restore_on_startup": "none",
   "session": {
     "restore_unsaved_buffers": false
   },
-  "restore_on_startup": "none",
+  "show_edit_predictions": true,
+  "tab_size": 2,
   "telemetry": {
     "diagnostics": false,
     "metrics": false
   },
+  "terminal": {
+    "detect_venv": {
+      "on": {
+        "directories": [".env", "env", ".venv", "venv"],
+        "activate_script": "default"
+      }
+    }
+  },
+  "theme": "Min Dark (Solid)",
+  "ui_font_family": "JetBrainsMono Nerd Font",
   "ui_font_size": 16,
-  "buffer_font_size": 16,
-  "theme": "Ayu Dark"
+  "ui_font_weight": 400
 }

@@ -24,3 +24,6 @@ source $ZSH_CONFIG/aliases.zsh
 source $ZSH_CONFIG/functions.zsh
 
 fastfetch
+
+# bun completions
+[ -s "/home/reki/.bun/_bun" ] && source "/home/reki/.bun/_bun"

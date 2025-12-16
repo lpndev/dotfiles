@@ -1,0 +1,50 @@
+{
+  "$schema": "/etc/xdg/swaync/configSchema.json",
+
+  "positionX": "right",
+  "positionY": "top",
+
+  "control-center-layer": "overlay",
+
+  "control-center-margin-bottom": 8,
+  "control-center-margin-left": 8,
+  "control-center-margin-right": 8,
+  "control-center-margin-top": 8,
+
+  "control-center-positionX": "none",
+  "control-center-positionY": "none",
+
+  "control-center-height": -1,
+  "control-center-width": 500,
+
+  "cssPriority": "user",
+  "fit-to-screen": false,
+  "hide-on-action": true,
+  "hide-on-clear": true,
+  "image-visibility": "always",
+  "keyboard-shortcuts": true,
+  "script-fail-notify": true,
+  "transition-time": 200,
+
+  "layer": "overlay",
+  "layer-shell": true,
+  "layer-shell-cover-screen": true,
+
+  "notification-body-image-height": 100,
+  "notification-body-image-width": 200,
+  "notification-inline-replies": true,
+  "notification-window-width": 400,
+
+  "timeout": 6,
+  "timeout-critical": 0,
+  "timeout-low": 4,
+
+  "widgets": ["title", "notifications"],
+  "widget-config": {
+    "title": {
+      "button-text": "Clear All",
+      "clear-all-button": true,
+      "text": "Notification Center"
+    }
+  }
+}

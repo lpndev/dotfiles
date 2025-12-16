@@ -18,6 +18,9 @@ clean() {
 }
 
 update() {
+  echo "Updating mirrors..."
+  mirrors
+
   echo "Updating packages..."
   sudo pacman -Syu --noconfirm
 

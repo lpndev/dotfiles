@@ -1,0 +1,12 @@
+[menu]
+executable = "fuzzel"
+args = ["--dmenu", "--layer=overlay"]
+
+[format]
+window_format = '{workspace_name} | {app_name} — "{title}"'
+icon_dirs = [
+    "/usr/share/icons/Colloid-Dark",
+    "/usr/share/icons/Colloid-Dark/scalable/apps",
+    "/usr/share/icons/hicolor/48x48/apps",
+    "/usr/share/pixmaps"
+]
