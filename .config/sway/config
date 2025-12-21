@@ -14,5 +14,5 @@ include ~/.config/sway/windowrules.conf
 exec swayidle -w \
   timeout 1200 'swaylock -f' \
   timeout 1230 'swaymsg "output * dpms off"' \
-  resume 'swaymsg "output * dpms on"' \
+  resume 'swaymsg "output * dpms on"; swaymsg reload' \
   before-sleep 'swaylock -f'

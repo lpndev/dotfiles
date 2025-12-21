@@ -1,18 +1,44 @@
 {
-  "autosave": {
-    "after_delay": {
-      "milliseconds": 1000
+  "languages": {
+    "JSON": {
+      "formatter": {
+        "external": {
+          "command": "prettier",
+          "arguments": ["--parser", "json"]
+        }
+      }
+    },
+    "JSONC": {
+      "formatter": {
+        "external": {
+          "command": "prettier",
+          "arguments": ["--parser", "json"]
+        }
+      }
     }
   },
-  "buffer_font_family": "JetBrainsMono Nerd Font",
-  "buffer_font_size": 16,
-  "features": {
-    "edit_prediction_provider": "copilot"
+  "agent": {
+    "model_parameters": [],
+    "enable_feedback": false
   },
+  "disable_ai": false,
+  "remove_trailing_whitespace_on_save": true,
   "gutter": {
     "folds": true
   },
-  "middle_click_paste": false,
+  "ssh_connections": [
+    {
+      "host": "100.123.205.42",
+      "username": "lain",
+      "args": [],
+      "projects": [
+        {
+          "paths": ["/home/lain"]
+        }
+      ]
+    }
+  ],
+  "show_edit_predictions": true,
   "outline_panel": {
     "auto_fold_dirs": false,
     "folder_icons": true
@@ -22,26 +48,42 @@
     "auto_fold_dirs": false
   },
   "restore_on_file_reopen": false,
-  "restore_on_startup": "none",
+  "features": {
+    "edit_prediction_provider": "copilot"
+  },
+  "middle_click_paste": false,
+  "tab_size": 2,
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  },
+  "ui_font_weight": 400,
+  "ui_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_family": "JetBrainsMono Nerd Font",
   "session": {
     "restore_unsaved_buffers": false
   },
-  "show_edit_predictions": true,
-  "tab_size": 2,
+  "restore_on_startup": "none",
   "telemetry": {
     "diagnostics": false,
     "metrics": false
   },
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "theme": "Min Dark (Solid)",
   "terminal": {
+    "default_height": 430,
+    "toolbar": {
+      "breadcrumbs": false
+    },
+    "font_size": 14,
+    "shell": "system",
     "detect_venv": {
       "on": {
         "directories": [".env", "env", ".venv", "venv"],
         "activate_script": "default"
       }
     }
-  },
-  "theme": "Min Dark (Solid)",
-  "ui_font_family": "JetBrainsMono Nerd Font",
-  "ui_font_size": 16,
-  "ui_font_weight": 400
+  }
 }

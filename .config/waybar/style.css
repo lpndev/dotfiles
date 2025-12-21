@@ -75,7 +75,8 @@ menu {
 #bluetooth,
 #pulseaudio,
 #battery,
-#clock {
+#clock,
+#language {
   padding: 0 0.4rem;
 }
 

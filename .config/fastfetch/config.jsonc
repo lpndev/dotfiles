@@ -5,85 +5,85 @@
       "keys": "#c6ba75",
       "output": "#f9f9f1",
       "separator": "#f9f9f1",
-      "title": "#f9f9f1",
+      "title": "#f9f9f1"
     },
-    "separator": " > ",
+    "separator": " > "
   },
   "logo": {
     "source": "~/.config/fastfetch/ascii.png",
-    "type": "auto",
-    "width": 40,
+    "type": "sixel",
+    "width": 40
   },
   "modules": [
     {
       "key": "     Host",
-      "type": "host",
+      "type": "host"
     },
     {
       "key": "      CPU",
-      "type": "cpu",
+      "type": "cpu"
     },
     {
       "key": "      GPU",
-      "type": "gpu",
+      "type": "gpu"
     },
     {
       "key": "   Memory",
-      "type": "memory",
+      "type": "memory"
     },
     {
       "key": "     Disk",
-      "type": "disk",
+      "type": "disk"
     },
     {
       "key": "       OS",
-      "type": "os",
+      "type": "os"
     },
     {
       "key": "   Kernel",
-      "type": "kernel",
+      "type": "kernel"
     },
     {
       "key": "    Shell",
-      "type": "shell",
+      "type": "shell"
     },
     {
       "key": " Packages",
-      "type": "packages",
+      "type": "packages"
     },
     {
       "key": "       DE",
-      "type": "de",
+      "type": "de"
     },
     {
       "key": "       WM",
-      "type": "wm",
+      "type": "wm"
     },
     {
       "key": "       LM",
-      "type": "lm",
+      "type": "lm"
     },
     {
       "key": " Terminal",
-      "type": "terminal",
+      "type": "terminal"
     },
     {
       "key": "   OS Age",
       "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
-      "type": "command",
+      "type": "command"
     },
     {
       "key": "   Uptime",
-      "type": "uptime",
+      "type": "uptime"
     },
     {
       "key": "     Date",
-      "type": "datetime",
+      "type": "datetime"
     },
     "break",
     {
       "symbol": "circle",
-      "type": "colors",
-    },
-  ],
+      "type": "colors"
+    }
+  ]
 }
