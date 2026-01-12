@@ -1,5 +1,5 @@
-@import url('libadwaita.css');
-@import url('libadwaita-tweaks.css');
+@import url("libadwaita.css");
+@import url("libadwaita-tweaks.css");
 
 /* Remove rounded corners */
 .titlebar,

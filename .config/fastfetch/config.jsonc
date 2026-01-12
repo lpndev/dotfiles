@@ -11,8 +11,8 @@
   },
   "logo": {
     "source": "~/.config/fastfetch/ascii.png",
-    "type": "sixel",
-    "width": 40
+    "type": "kitty",
+    "width": 32
   },
   "modules": [
     {

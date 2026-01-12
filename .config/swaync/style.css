@@ -1,56 +1,35 @@
 :root {
-  --border: 2px solid var(--color-accent);
   --border-radius: 0rem;
   --color-accent: rgb(198, 186, 117);
   --color-background: rgb(10, 10, 10);
   --color-foreground: rgb(250, 250, 250);
-  --padding: 1rem;
 }
 
 * {
-  all: unset;
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 16px;
 }
 
-body {
-  font-family: JetBrainsMono Nerd Font;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.control-center-clear-all {
-  padding: 0.2rem 0.4rem;
-  background: var(--color-accent);
-  color: var(--color-background);
-}
-
-.notification-content {
+.control-center {
+  border: 1px solid var(--color-accent);
   background-color: var(--color-background);
-  border: var(--border);
-  padding: var(--padding);
-}
-
-.widgets {
-  background-color: var(--color-background);
-  border: var(--border);
-}
-
-.floating-notifications {
   margin: 0.6rem;
 }
 
-.widget-title {
-  padding: var(--padding);
-  border-bottom: var(--border);
+.control-center-clear-all {
+  color: var(--color-background);
+  background-color: var(--color-accent);
 }
 
-.widget-notifications {
-  padding: var(--padding);
+.notification-group,
+.notification-default-action {
+  background-color: var(--color-background);
 }
 
-.summary {
-  padding: 0 0.4rem;
+.notification-default-action {
+  border: 1px solid var(--color-accent);
 }
 
-.notification-row {
-  margin-bottom: 0.4rem;
+.notification-background {
+  padding: 0.6rem;
 }

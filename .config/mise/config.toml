@@ -1,6 +1,0 @@
-[tools]
-"npm:@anthropic-ai/claude-code" = "latest"
-"npm:ngrok" = "latest"
-bun = "latest"
-prettier = "latest"
-uv = "latest"

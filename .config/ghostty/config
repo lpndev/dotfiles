@@ -1,0 +1,15 @@
+background = 000
+
+font-size = 12
+
+font-family = JetBrainsMono Nerd Font
+font-style = medium
+
+cursor-style = block
+shell-integration-features = no-cursor
+
+window-padding-x = 12
+window-padding-y = 12
+
+theme = iTerm2 Smoooooth
+window-save-state = never

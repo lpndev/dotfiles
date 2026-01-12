@@ -2,6 +2,8 @@
 output eDP-1 {
   background ~/Pictures/Wallpapers/background.png fill
   resolution 1920x1200@165Hz
+  max_render_time 6
+  adaptive_sync on
 }
 
 # configs
@@ -14,5 +16,6 @@ include ~/.config/sway/windowrules.conf
 exec swayidle -w \
   timeout 1200 'swaylock -f' \
   timeout 1230 'swaymsg "output * dpms off"' \
-  resume 'swaymsg "output * dpms on"; swaymsg reload' \
+  resume 'swaymsg "output * dpms on"' \
+  unlock 'swaymsg reload' \
   before-sleep 'swaylock -f'

@@ -10,49 +10,49 @@
     "group/usage",
     "battery",
     "group/settings",
-    "group/menu",
+    "group/menu"
   ],
 
   // left
   "sway/window": {
     "icon-size": 18,
     "icon": true,
-    "max-length": 42,
+    "max-length": 42
   },
 
   // right
   "privacy": {
     "icon-size": 14,
     "icon-spacing": 8,
-    "modules": [{ "type": "screenshare" }, { "type": "audio-in" }],
+    "modules": [{ "type": "screenshare" }, { "type": "audio-in" }]
   },
 
   "tray": {
     "icon-size": 14,
-    "spacing": 8,
+    "spacing": 8
   },
 
   // usage
   "group/usage": {
     "modules": ["cpu", "memory"],
-    "orientation": "horizontal",
+    "orientation": "horizontal"
   },
 
   "cpu": {
     "format": " {usage}%",
     "icon-size": 18,
     "interval": 10,
-    "on-click": "foot -e btop",
-    "tooltip": true,
+    "on-click": "ghostty -e btop",
+    "tooltip": true
   },
 
   "memory": {
     "format": " {used}G",
     "icon-size": 18,
     "interval": 10,
-    "on-click": "foot -e btop",
+    "on-click": "ghostty -e btop",
     "tooltip-format": "{used} / {total} G",
-    "tooltip": true,
+    "tooltip": true
   },
 
   // battery
@@ -66,14 +66,14 @@
     "interval": 60,
     "states": {
       "warning": 30,
-      "critical": 15,
-    },
+      "critical": 15
+    }
   },
 
   // settings
   "group/settings": {
     "modules": ["network", "bluetooth", "pulseaudio", "sway/language"],
-    "orientation": "horizontal",
+    "orientation": "horizontal"
   },
 
   "network": {
@@ -83,7 +83,7 @@
     "on-click": "nm-connection-editor",
     "tooltip-format-disconnected": "Disconnected",
     "tooltip-format-ethernet": "Ethernet {ifname}",
-    "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)"
   },
 
   "bluetooth": {
@@ -92,7 +92,7 @@
     "format-off": "󰂲",
     "format-on": "",
     "on-click": "blueman-manager",
-    "tooltip-format": "{num_connections} Device {device_alias} {device_battery_percentage}%",
+    "tooltip-format": "{num_connections} Device {device_alias} {device_battery_percentage}%"
   },
 
   "pulseaudio": {
@@ -101,19 +101,20 @@
     "icon-size": 18,
     "on-click": "pavucontrol",
     "scroll-step": 5,
-    "tooltip-format": "{volume}% Volume",
+    "tooltip-format": "{volume}% Volume"
   },
 
   "sway/language": {
     "format": "󰌌 {short}",
+    "return-type": "json",
     "on-click": "swaymsg input type:keyboard xkb_switch_layout next",
-    "tooltip": false,
+    "tooltip": false
   },
 
   // menu
   "group/menu": {
     "modules": ["clock", "custom/notifications"],
-    "orientation": "horizontal",
+    "orientation": "horizontal"
   },
 
   "clock": {
@@ -121,7 +122,7 @@
     "interval": 60,
     "on-click": "sleep 0.1 && swaync-client -t -sw",
     "tooltip-format": "{:%A, %d %B %Y %H:%M}",
-    "tooltip": true,
+    "tooltip": true
   },
 
   "custom/notifications": {
@@ -131,13 +132,13 @@
     "format": "{icon}",
     "format-icons": {
       "notification": "󱅫 ",
-      "none": "",
+      "none": "󰂜 ",
       "dnd-notification": " ",
-      "dnd-none": "",
+      "dnd-none": "󰪓 "
     },
-    "on-click-right": "sleep 0.1 && swaync-client -d -sw",
-    "on-click": "sleep 0.1 && swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "on-click": "swaync-client -t -sw",
     "return-type": "json",
-    "tooltip": false,
-  },
+    "tooltip": false
+  }
 }
