@@ -2,12 +2,16 @@
   "[nix]": {
     "editor.defaultFormatter": "jnoortheen.nix-ide"
   },
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  },
+  "chat.viewSessions.orientation": "stacked",
   "code-runner.clearPreviousOutput": true,
   "code-runner.enableAppInsights": false,
   "code-runner.ignoreSelection": true,
   "code-runner.runInTerminal": true,
-  "diffEditor.hideUnchangedRegions.enabled": true,
-  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "diffEditor.renderSideBySide": true,
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorStyle": "block",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -31,6 +35,7 @@
   "intelephense.telemetry.enabled": false,
   "javascript.suggest.autoImports": true,
   "redhat.telemetry.enabled": false,
+  "svelte.enable-ts-plugin": true,
   "symbols.hidesExplorerArrows": false,
   "telemetry.feedback.enabled": false,
   "telemetry.telemetryLevel": "off",
@@ -39,6 +44,7 @@
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.gpuAcceleration": "on",
   "terminal.integrated.hideOnStartup": "always",
+  "terminal.integrated.initialHint": false,
   "terminal.integrated.persistentSessionReviveProcess": "never",
   "typescript.suggest.autoImports": true,
   "window.customTitleBarVisibility": "never",

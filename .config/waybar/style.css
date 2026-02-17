@@ -1,6 +1,5 @@
 /* bar */
 * {
-  all: unset;
   border: none;
   font-family: "JetBrainsMono Nerd Font";
   font-size: 14px;
@@ -8,6 +7,7 @@
 }
 
 #waybar {
+  all: unset;
   color: rgba(250, 250, 250, 0.8);
 }
 
@@ -19,8 +19,8 @@ window#waybar.empty #window {
 tooltip,
 menu {
   background: rgb(10, 10, 10);
+  border-radius: 0;
   border: 1px solid rgb(198, 186, 117);
-  padding: 0.4rem;
 }
 
 /* modules */
@@ -38,23 +38,27 @@ menu {
 }
 
 #workspaces button {
+  border-radius: 0;
   color: rgba(255, 255, 255, 0.8);
   opacity: 0.8;
-  padding: 0.2rem 0.6rem;
+  padding: 0 0.4rem;
+  transition: none;
 }
 
 #workspaces button:hover {
-  opacity: 1;
+  background-color: inherit;
+  color: rgb(255, 255, 255);
 }
 
 #workspaces button.focused {
   background-color: rgb(198, 186, 117);
   color: rgb(10, 10, 10);
   opacity: 1;
-  padding: 0.2rem 1.2rem;
+  padding: 0 1rem;
 }
 
 /* groups */
+#custom-launcher,
 #tray,
 #window,
 #usage,
@@ -82,4 +86,9 @@ menu {
 
 #custom-notifications {
   padding-left: 0.4rem;
+}
+
+#custom-launcher {
+  padding-left: 0.4rem;
+  padding-right: 0.8rem;
 }

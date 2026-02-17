@@ -1,0 +1,78 @@
+{
+  "agent": {
+    "default_model": {
+      "model": "claude-haiku-4.5",
+      "provider": "copilot_chat"
+    },
+    "default_profile": "write",
+    "enable_feedback": false,
+    "model_parameters": []
+  },
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  },
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_size": 16,
+  "disable_ai": false,
+  "features": {
+    "edit_prediction_provider": "copilot"
+  },
+  "gutter": {
+    "folds": true
+  },
+  "languages": {
+    "JSON": {
+      "formatter": {
+        "external": {
+          "arguments": ["--parser", "json"],
+          "command": "prettier"
+        }
+      }
+    },
+    "JSONC": {
+      "formatter": {
+        "external": {
+          "arguments": ["--parser", "json"],
+          "command": "prettier"
+        }
+      }
+    }
+  },
+  "load_direnv": "shell_hook",
+  "middle_click_paste": false,
+  "outline_panel": {
+    "auto_fold_dirs": false
+  },
+  "project_panel": {
+    "auto_fold_dirs": false,
+    "hide_root": true
+  },
+  "remove_trailing_whitespace_on_save": true,
+  "restore_on_file_reopen": false,
+  "restore_on_startup": "none",
+  "session": {
+    "restore_unsaved_buffers": false
+  },
+  "tab_size": 2,
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "terminal": {
+    "default_height": 430,
+    "detect_venv": {
+      "on": {
+        "activate_script": "default",
+        "directories": [".env", "env", ".venv", "venv"]
+      }
+    },
+    "font_size": 14,
+    "shell": "system"
+  },
+  "theme": "Min Dark (Solid)",
+  "ui_font_family": "JetBrainsMono Nerd Font",
+  "ui_font_size": 16,
+  "ui_font_weight": 400
+}

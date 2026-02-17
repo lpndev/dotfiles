@@ -1,9 +1,9 @@
 clean() {
   echo "Cleaning package cache..."
-  sudo pacman -Scc --noconfirm
+  sudo pacman -Scc
 
   echo "Removing orphaned packages..."
-  sudo pacman -Rns $(sudo pacman -Qtdq) --noconfirm
+  sudo pacman -Rns $(sudo pacman -Qtdq)
 
   echo "Cleaning journal logs older than 1 week..."
   sudo journalctl --vacuum-time=1week
@@ -22,10 +22,10 @@ update() {
   mirrors
 
   echo "Updating pacman packages..."
-  sudo pacman -Syu --noconfirm
+  sudo pacman -Syyu
 
   echo "Updating AUR packages..."
-  yay -Syu --noconfirm
+  yay -Sua
 
   echo "Updating Flatpak packages..."
   flatpak update -y
@@ -35,7 +35,7 @@ update() {
 
 reinstall-yay() {
   echo "Removing yay..."
-  sudo pacman -Rns yay yay-bin yay-debug yay-bin-debug --noconfirm
+  sudo pacman -Rns yay yay-bin yay-debug yay-bin-debug
 
   echo "Cloning and reinstalling yay from source..."
   cd /tmp && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd ~
