@@ -5,6 +5,7 @@
   "[php]": {
     "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
   },
+  "chat.agent.maxRequests": 10000,
   "chat.viewSessions.orientation": "stacked",
   "code-runner.clearPreviousOutput": true,
   "code-runner.enableAppInsights": false,
@@ -12,6 +13,14 @@
   "code-runner.runInTerminal": true,
   "diffEditor.ignoreTrimWhitespace": true,
   "diffEditor.renderSideBySide": true,
+  "discord.detailsIdling": "",
+  "discord.idleTimeout": 10000,
+  "discord.largeImage": "{LANG}",
+  "discord.lowerDetailsEditing": "Hacking {file_name}",
+  "discord.lowerDetailsIdling": "{empty}",
+  "discord.removeDetails": true,
+  "discord.removeRemoteRepository": true,
+  "discord.smallImage": "",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorStyle": "block",
   "editor.defaultFormatter": "esbenp.prettier-vscode",

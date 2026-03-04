@@ -19,18 +19,36 @@ clean() {
 
 update() {
   echo "Updating mirrors..."
-  mirrors
+  mirrors || {
+    echo "Mirror update failed";
+  }
 
-  echo "Updating pacman packages..."
-  sudo pacman -Syyu
+  echo "Checking system clock..."
+  if ! timedatectl show -p NTPSynchronized --value | grep -q yes; then
+    echo "Syncing clock..."
+    sudo timedatectl set-ntp true
+    sleep 3
+  fi
 
-  echo "Updating AUR packages..."
+  echo "Updating keyring..."
+  if ! sudo pacman -Sy --needed archlinux-keyring; then
+    echo "Resetting pacman keys..."
+    sudo rm -rf /etc/pacman.d/gnupg
+    sudo pacman-key --init
+    sudo pacman-key --populate archlinux
+    sudo pacman -Sy --needed archlinux-keyring
+  fi
+
+  echo "Full system upgrade..."
+  sudo pacman -Su
+
+  echo "Updating AUR..."
   yay -Sua
 
-  echo "Updating Flatpak packages..."
+  echo "Updating Flatpaks..."
   flatpak update -y
 
-  echo "System update complete!"
+  echo "System updated successfully."
 }
 
 reinstall-yay() {

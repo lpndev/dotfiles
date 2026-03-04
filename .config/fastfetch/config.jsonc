@@ -5,85 +5,75 @@
       "keys": "#c6ba75",
       "output": "#f9f9f1",
       "separator": "#f9f9f1",
-      "title": "#f9f9f1"
+      "title": "#f9f9f1",
     },
-    "separator": " > "
+    "separator": " ",
   },
   "logo": {
     "source": "~/.config/fastfetch/ascii.png",
     "type": "kitty",
-    "width": 32
+    "width": 24,
   },
   "modules": [
     {
-      "key": "     Host",
-      "type": "host"
+      "key": "host  ",
+      "type": "host",
+      "format": "{2}",
     },
     {
-      "key": "      CPU",
-      "type": "cpu"
+      "key": "cpu   ",
+      "type": "cpu",
+      "format": "{}",
     },
     {
-      "key": "      GPU",
-      "type": "gpu"
+      "key": "gpu   ",
+      "type": "gpu",
+      "format": "{2}",
     },
     {
-      "key": "   Memory",
-      "type": "memory"
+      "key": "memory",
+      "type": "memory",
+      "format": "{1} / {2}",
     },
     {
-      "key": "     Disk",
-      "type": "disk"
+      "key": "os    ",
+      "type": "os",
+      "format": "{2}",
     },
     {
-      "key": "       OS",
-      "type": "os"
+      "key": "kernel",
+      "type": "kernel",
+      "format": "{2}",
     },
     {
-      "key": "   Kernel",
-      "type": "kernel"
+      "key": "shell ",
+      "type": "shell",
+      "format": "{}",
     },
     {
-      "key": "    Shell",
-      "type": "shell"
+      "key": "pkgs  ",
+      "type": "packages",
+      "format": "{}",
     },
     {
-      "key": " Packages",
-      "type": "packages"
+      "key": "wm    ",
+      "type": "wm",
+      "format": "{}",
     },
     {
-      "key": "       DE",
-      "type": "de"
+      "key": "term  ",
+      "type": "terminal",
+      "format": "{}",
     },
     {
-      "key": "       WM",
-      "type": "wm"
+      "key": "age   ",
+      "text": "echo $(( ($(date +%s) - $(stat -c %W /)) / 86400 )) days",
+      "type": "command",
     },
     {
-      "key": "       LM",
-      "type": "lm"
+      "key": "uptime",
+      "type": "uptime",
+      "format": "{1}d {2}h {3}m",
     },
-    {
-      "key": " Terminal",
-      "type": "terminal"
-    },
-    {
-      "key": "   OS Age",
-      "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
-      "type": "command"
-    },
-    {
-      "key": "   Uptime",
-      "type": "uptime"
-    },
-    {
-      "key": "     Date",
-      "type": "datetime"
-    },
-    "break",
-    {
-      "symbol": "circle",
-      "type": "colors"
-    }
-  ]
+  ],
 }
