@@ -10,8 +10,6 @@ formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
 formulahendry.code-runner
 github.copilot-chat
-github.vscode-github-actions
-gitlab.gitlab-workflow
 icrawl.discord-vscode
 jnoortheen.nix-ide
 junstyle.php-cs-fixer

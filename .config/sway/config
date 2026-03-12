@@ -1,3 +1,5 @@
+# primary_selection disabled
+
 # configs
 include ~/.config/sway/monitors.conf
 include ~/.config/sway/environment.conf
