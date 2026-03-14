@@ -1,16 +1,19 @@
-# primary_selection disabled
+# environment and authentication
+exec systemctl --user import-environment
+exec dbus-update-activation-environment --systemd --all
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # configs
-include ~/.config/sway/monitors.conf
-include ~/.config/sway/environment.conf
-include ~/.config/sway/variables.conf
 include ~/.config/sway/general.conf
+include ~/.config/sway/monitors.conf
+include ~/.config/sway/variables.conf
 include ~/.config/sway/keybindings.conf
 include ~/.config/sway/windowrules.conf
 
 # swayidle + swaylock
 exec swayidle -w \
-  timeout 1800 'swaylock -f && swaymsg reload' \
+  timeout 1800 'swaylock -f' \
   timeout 1830 'swaymsg "output * dpms off"' \
-  resume 'swaymsg "output * dpms on"' \
-  before-sleep 'swaylock -f && swaymsg reload'
+    resume 'swaymsg "output * dpms on" && swaymsg reload' \
+  before-sleep 'swaylock -f' \
+  after-resume 'swaymsg reload'

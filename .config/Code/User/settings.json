@@ -59,7 +59,7 @@
   "window.menuBarVisibility": "hidden",
   "window.restoreWindows": "none",
   "window.titleBarStyle": "native",
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 1,
   "workbench.activityBar.location": "top",
   "workbench.colorTheme": "Min Dark",
   "workbench.editor.labelFormat": "short",
