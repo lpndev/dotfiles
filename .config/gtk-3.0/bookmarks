@@ -1,5 +1,5 @@
-file:///${HOME}/Documents
-file:///${HOME}/Downloads
-file:///${HOME}/Music
-file:///${HOME}/Pictures
-file:///${HOME}/Videos
+file:///home/reki/Documents
+file:///home/reki/Downloads
+file:///home/reki/Music
+file:///home/reki/Pictures
+file:///home/reki/Videos
