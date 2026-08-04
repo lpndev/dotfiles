@@ -1,0 +1,7 @@
+bradlc.vscode-tailwindcss
+dbaeumer.vscode-eslint
+eamodio.gitlens
+editorconfig.editorconfig
+esbenp.prettier-vscode
+sonarsource.sonarlint-vscode
+tamasfe.even-better-toml
