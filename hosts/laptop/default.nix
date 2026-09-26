@@ -8,12 +8,12 @@
     ../../profiles/workspace.nix
     ../../system/laptop.nix
     ../../system/nvidia.nix
-    ../../system/ssd.nix
   ];
 
   networking.hostName = "laptop";
 
   hardware.cpu.intel.updateMicrocode = true;
+  services.fstrim.enable = true;
 
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;

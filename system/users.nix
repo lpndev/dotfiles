@@ -1,11 +1,18 @@
-{ pkgs, ... }:
+{
+  pkgs,
+  ...
+}:
 
 {
   programs.zsh.enable = true;
 
   users.users.lain = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ];
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+      "libvirtd"
+    ];
     shell = pkgs.zsh;
   };
 }

@@ -24,7 +24,5 @@
 
   programs.virt-manager.enable = true;
 
-  users.users.lain.extraGroups = [ "libvirtd" ];
-
   environment.systemPackages = with pkgs; [ podman-tui ];
 }
