@@ -1,0 +1,29 @@
+{
+  programs.starship = {
+    enable = true;
+    enableZshIntegration = true;
+
+    settings = {
+      username = {
+        show_always = true;
+        format = "[$user](white)";
+        style_root = "red";
+      };
+
+      hostname = {
+        ssh_only = false;
+        format = "[@$hostname](white) ";
+      };
+
+      directory = {
+        truncate_to_repo = false;
+        read_only = " 󰌾";
+      };
+
+      character = {
+        success_symbol = "[❯](green)";
+        error_symbol = "[❯](red)";
+      };
+    };
+  };
+}
