@@ -1,11 +1,8 @@
 {
-  imports = [
-    ../../system/stylix.nix
-  ];
-
   wsl = {
     enable = true;
     defaultUser = "lain";
+    useWindowsDriver = true;
   };
 
   networking.hostName = "wsl";

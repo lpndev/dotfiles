@@ -3,13 +3,6 @@
   ...
 }:
 
-let
-  jetbrainsMono = {
-    package = pkgs.nerd-fonts.jetbrains-mono;
-    name = "JetBrainsMono Nerd Font";
-  };
-in
-
 {
   stylix = {
     enable = true;
@@ -18,10 +11,22 @@ in
     base16Scheme = "${pkgs.base16-schemes}/share/themes/default-light.yaml";
 
     fonts = {
-      serif = jetbrainsMono;
-      sansSerif = jetbrainsMono;
-      monospace = jetbrainsMono;
-      emoji = jetbrainsMono;
+      serif = {
+        package = pkgs.nerd-fonts.jetbrains-mono;
+        name = "JetBrainsMono Nerd Font";
+      };
+      sansSerif = {
+        package = pkgs.nerd-fonts.jetbrains-mono;
+        name = "JetBrainsMono Nerd Font";
+      };
+      monospace = {
+        package = pkgs.nerd-fonts.jetbrains-mono;
+        name = "JetBrainsMono Nerd Font";
+      };
+      emoji = {
+        package = pkgs.nerd-fonts.jetbrains-mono;
+        name = "JetBrainsMono Nerd Font";
+      };
     };
 
     icons = {
