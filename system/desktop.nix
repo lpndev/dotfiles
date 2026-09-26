@@ -12,8 +12,6 @@
         xterm.enable = false;
         xfce.enable = true;
       };
-
-      xkb.layout = "us";
     };
 
     displayManager.defaultSession = "xfce";

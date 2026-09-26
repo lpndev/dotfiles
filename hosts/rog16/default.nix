@@ -6,14 +6,20 @@
 {
   imports = [
     ../../profiles/workspace.nix
-    ../../system/laptop.nix
     ../../system/nvidia.nix
   ];
 
-  networking.hostName = "laptop";
+  networking.hostName = "rog16";
 
   hardware.cpu.intel.updateMicrocode = true;
-  services.fstrim.enable = true;
+
+  zramSwap.enable = true;
+
+  services = {
+    thermald.enable = true;
+    tlp.enable = true;
+    fstrim.enable = true;
+  };
 
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;

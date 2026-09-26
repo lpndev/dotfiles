@@ -1,5 +1,7 @@
 {
-  imports = [ ../../system/stylix.nix ];
+  imports = [
+    ../../system/stylix.nix
+  ];
 
   wsl = {
     enable = true;

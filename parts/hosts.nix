@@ -5,12 +5,12 @@
 
 {
   flake.nixosConfigurations = {
-    laptop = inputs.nixpkgs.lib.nixosSystem {
+    rog16 = inputs.nixpkgs.lib.nixosSystem {
       modules = [
         inputs.self.nixosModules.system
         inputs.home-manager.nixosModules.home-manager
         inputs.stylix.nixosModules.stylix
-        ../hosts/laptop
+        ../hosts/rog16
       ];
     };
 

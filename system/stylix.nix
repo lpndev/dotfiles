@@ -3,35 +3,25 @@
   ...
 }:
 
-{
-  programs.dconf.enable = true;
+let
+  jetbrainsMono = {
+    package = pkgs.nerd-fonts.jetbrains-mono;
+    name = "JetBrainsMono Nerd Font";
+  };
+in
 
+{
   stylix = {
     enable = true;
-    polarity = "light";
 
+    polarity = "light";
     base16Scheme = "${pkgs.base16-schemes}/share/themes/default-light.yaml";
 
     fonts = {
-      serif = {
-        package = pkgs.nerd-fonts.jetbrains-mono;
-        name = "JetBrainsMono Nerd Font";
-      };
-
-      sansSerif = {
-        package = pkgs.nerd-fonts.jetbrains-mono;
-        name = "JetBrainsMono Nerd Font";
-      };
-
-      monospace = {
-        package = pkgs.nerd-fonts.jetbrains-mono;
-        name = "JetBrainsMono Nerd Font";
-      };
-
-      emoji = {
-        package = pkgs.nerd-fonts.jetbrains-mono;
-        name = "JetBrainsMono Nerd Font";
-      };
+      serif = jetbrainsMono;
+      sansSerif = jetbrainsMono;
+      monospace = jetbrainsMono;
+      emoji = jetbrainsMono;
     };
 
     icons = {
@@ -45,14 +35,6 @@
       package = pkgs.adwaita-icon-theme;
       name = "Adwaita";
       size = 24;
-    };
-
-    targets = {
-      gtk.enable = true;
-      qt = {
-        enable = true;
-        platform = "qtct";
-      };
     };
   };
 }

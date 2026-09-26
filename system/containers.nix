@@ -6,8 +6,6 @@
 {
   virtualisation = {
     containers = {
-      enable = true;
-
       registries.settings = {
         unqualified-search-registries = [ "docker.io" ];
       };

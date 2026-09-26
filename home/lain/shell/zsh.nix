@@ -12,13 +12,10 @@
   programs.zsh = {
     enable = true;
 
-    enableCompletion = true;
     syntaxHighlighting.enable = true;
 
     history = {
       path = "${config.xdg.cacheHome}/zsh/history";
-      size = 10000;
-      save = 10000;
     };
 
     autosuggestion = {
