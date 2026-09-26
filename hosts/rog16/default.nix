@@ -11,11 +11,7 @@
 
   networking.hostName = "rog16";
 
-  hardware = {
-    enableAllFirmware = true;
-    cpu.intel.updateMicrocode = true;
-  };
-
+  hardware.cpu.intel.updateMicrocode = true;
   zramSwap.enable = true;
 
   services = {

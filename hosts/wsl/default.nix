@@ -7,6 +7,8 @@
 
   networking.hostName = "wsl";
 
+  hardware.enableAllFirmware = false;
+
   environment.sessionVariables = {
     DONT_PROMPT_WSL_INSTALL = "1";
   };
