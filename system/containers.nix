@@ -4,6 +4,8 @@
 }:
 
 {
+  users.users.lain.extraGroups = [ "libvirtd" ];
+
   virtualisation = {
     containers = {
       registries.settings = {
@@ -22,5 +24,7 @@
 
   programs.virt-manager.enable = true;
 
-  environment.systemPackages = with pkgs; [ podman-tui ];
+  environment.systemPackages = with pkgs; [
+    podman-tui
+  ];
 }

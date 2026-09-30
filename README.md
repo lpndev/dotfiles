@@ -51,9 +51,8 @@ swapon $SWAP
 
 ```sh
 # clone this repository and install
-cd /mnt/etc/nixos
-git clone https://github.com/lpndev/dotfiles
-nixos-install --flake /etc/nixos#<host>
+git clone https://github.com/lpndev/dotfiles /mnt/etc/nixos
+nixos-install --flake /mnt/etc/nixos#<host>
 
 # set user password
 nixos-enter --root /mnt -c "passwd lain"

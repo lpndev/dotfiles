@@ -8,11 +8,7 @@
 
   users.users.lain = {
     isNormalUser = true;
-    extraGroups = [
-      "wheel"
-      "networkmanager"
-      "libvirtd"
-    ];
+    extraGroups = [ "wheel" ];
     shell = pkgs.zsh;
   };
 }

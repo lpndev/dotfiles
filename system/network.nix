@@ -1,4 +1,6 @@
 {
+  users.users.lain.extraGroups = [ "networkmanager" ];
+
   networking.networkmanager = {
     enable = true;
     dns = "systemd-resolved";

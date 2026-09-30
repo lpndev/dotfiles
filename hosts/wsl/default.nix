@@ -1,13 +1,16 @@
 {
+  imports = [
+    ../../system/appearance.nix
+  ];
+
   wsl = {
     enable = true;
     defaultUser = "lain";
     useWindowsDriver = true;
+    wslConf.network.generateResolvConf = true;
   };
 
   networking.hostName = "wsl";
-
-  hardware.enableAllFirmware = false;
 
   environment.sessionVariables = {
     DONT_PROMPT_WSL_INSTALL = "1";

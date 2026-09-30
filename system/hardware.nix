@@ -1,11 +1,6 @@
 {
-  lib,
-  ...
-}:
-
-{
   hardware = {
-    enableAllFirmware = lib.mkDefault true;
+    enableAllFirmware = true;
 
     graphics = {
       enable = true;
