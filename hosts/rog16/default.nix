@@ -4,22 +4,6 @@
 }:
 
 {
-  imports = [
-    ../../profiles/workspace.nix
-    ../../system/nvidia.nix
-  ];
-
-  networking.hostName = "rog16";
-
-  hardware.cpu.intel.updateMicrocode = true;
-  zramSwap.enable = true;
-
-  services = {
-    thermald.enable = true;
-    tlp.enable = true;
-    fstrim.enable = true;
-  };
-
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
     kernelModules = [ ];
@@ -58,8 +42,4 @@
       device = "/dev/disk/by-label/swap";
     }
   ];
-
-  nixpkgs.hostPlatform = "x86_64-linux";
-
-  system.stateVersion = "26.11";
 }
