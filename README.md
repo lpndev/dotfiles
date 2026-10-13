@@ -64,5 +64,42 @@ reboot
 ### Rebuild
 
 ```sh
+# set repository ownership
+sudo chown -R lain:users /etc/nixos
+
+# rebuild and switch system
 sudo nixos-rebuild switch --flake /etc/nixos#<host>
+```
+
+### Maintenance
+
+```sh
+# update flake inputs
+git add .
+sudo nix flake update
+
+# collect unused store paths
+sudo nix store gc
+
+# delete old generations & garbage
+sudo nix-collect-garbage -d
+```
+
+### Useful Commands
+
+```sh
+# list flake outputs and hosts
+nix flake show /etc/nixos
+
+# list system generations
+sudo nixos-rebuild list-generations
+
+# rollback to previous generation
+sudo nixos-rebuild switch --rollback
+
+# test configuration without making it boot default
+sudo nixos-rebuild test --flake /etc/nixos#
+
+# build configuration without activating it
+sudo nixos-rebuild build --flake /etc/nixos#
 ```
