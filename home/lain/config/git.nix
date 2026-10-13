@@ -1,7 +1,4 @@
-{
-  config,
-  ...
-}:
+{ config, ... }:
 
 {
   programs.git = {
@@ -19,8 +16,8 @@
       init.defaultBranch = "main";
 
       user = {
-        name = "Leonardo Diniz";
-        email = "work.leoaugusto@gmail.com";
+        name = "lpndev";
+        email = "137980570+lpndev@users.noreply.github.com";
       };
     };
   };
