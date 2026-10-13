@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}:
+{ pkgs, ... }:
 
 {
   users.users.lain.extraGroups = [ "libvirtd" ];
