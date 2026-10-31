@@ -24,6 +24,7 @@
         }
         inputs.self.nixosModules.system
         inputs.nixos-wsl.nixosModules.default
+        ../modules/virt
         ../hosts/wsl
       ];
     };

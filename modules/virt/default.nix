@@ -22,6 +22,7 @@
   programs.virt-manager.enable = true;
 
   environment.systemPackages = with pkgs; [
+    docker-compose
     podman-tui
   ];
 }
